@@ -1,0 +1,98 @@
+/* pages/map/map.wxss */
+page{
+    height: 100%;
+}
+.map{
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%98%8C%E5%B9%B3%E5%BA%95%E5%9B%BE.png?sign=bee0572f82537e31c57a468f31147e43&t=1597763396');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1334rpx;
+    background-position: center center;
+    position: relative;
+}
+.pix3{
+    background-size: 100% 100%;  
+}
+.picture1{
+    position: absolute;
+    bottom: 64rpx;
+    left: 80rpx;
+    width: 220rpx;
+}
+.pix3 .picture1{
+    bottom: 170rpx;  
+}
+.picture2{
+    position: absolute;
+    bottom: 40rpx;
+    right: 215rpx;
+    width: 180rpx;
+}
+.pix3 .picture2{
+    bottom: 140rpx;  
+}
+.picture3{
+    position: absolute;
+    bottom: 162rpx;
+    left: 208rpx;
+    width: 150rpx;
+}
+.pix3 .picture3{
+    bottom: 245rpx;  
+}
+.picture4{
+    position: absolute;
+    bottom: 317rpx;
+    right: 164rpx;
+    width: 170rpx;
+}
+.pix3 .picture4{
+    bottom: 420rpx;  
+}
+.picture5{
+    position: absolute;
+    top: 240rpx;
+    left: 380rpx;
+    width: 130rpx;
+}
+.pix3 .picture5{
+    top: 354rpx;  
+}
+.picture6{
+    position: absolute;
+    bottom: 218rpx;
+    left: 316rpx;
+    width: 140rpx;
+}
+.pix3 .picture6{
+    bottom: 327rpx;  
+}
+
+.picture7{
+    position: absolute;
+    bottom: 132rpx;
+    right: 79rpx;
+    width: 150rpx;
+}
+.pix3 .picture7{
+    bottom: 230rpx;  
+}
+
+.picture8{
+    position: absolute;
+    left: 100rpx;
+    bottom: 319rpx;
+    width: 150rpx;
+}
+.pix3 .picture8{
+    bottom: 416rpx;  
+}
+.picture9{
+    position: absolute;
+    left: 161rpx;
+    top: 453rpx;
+    width: 130rpx;
+}
+.pix3 .picture9{
+    top: 572rpx;  
+}

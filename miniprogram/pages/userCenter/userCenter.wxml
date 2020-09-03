@@ -1,0 +1,48 @@
+<!-- pages/userCenter/userCenter.wxml -->
+<view class="mainBg" hover-class="none" hover-stop-propagation="false">
+    <view class="top" hover-class="none" hover-stop-propagation="false">
+        <video src="" wx:if="{{false}}"></video>
+        <view class="btn" hover-class="none" hover-stop-propagation="false" bind:tap="changePlayStatus">
+            <image class="" src="../../images/pause.png" mode="widthFix" wx:if="{{!isPlay}}"></image>
+            <image class="" src="../../images/play.png" mode="widthFix" wx:else></image>
+            <text class="">播放短片</text>
+        </view>
+    </view>
+    <view class="my_map" hover-class="none" hover-stop-propagation="false">
+        <view class="title" hover-class="none" hover-stop-propagation="false">
+            <image class="" src="../../images/photo.png" mode="widthFix"></image>
+            <text class="" selectable="false" space="false" decode="false">我的打卡地图</text>
+        </view>
+        <view class="photo_list" hover-class="none" hover-stop-propagation="false">
+            <view class="item" hover-class="none" hover-stop-propagation="false">
+                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/mainMap.png?sign=05304debeb59b4dde3a9b4b37be99be2&t=1598106204" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+            <view class="item" hover-class="none" hover-stop-propagation="false">
+                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/mainMap.png?sign=05304debeb59b4dde3a9b4b37be99be2&t=1598106204" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+        </view>
+    </view>
+    <view class="my_photo" hover-class="none" hover-stop-propagation="false">
+        <view class="title" hover-class="none" hover-stop-propagation="false">
+            <image class="" src="../../images/camera2.png" mode="widthFix"></image>
+            <text class="" selectable="false" space="false" decode="false">我的打卡照片</text>
+        </view>
+        <view class="photo_list" hover-class="none" hover-stop-propagation="false">
+            <view class="item" hover-class="none" hover-stop-propagation="false">
+                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/mainMap.png?sign=05304debeb59b4dde3a9b4b37be99be2&t=1598106204" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+            <view class="item" hover-class="none" hover-stop-propagation="false">
+                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/mainMap.png?sign=05304debeb59b4dde3a9b4b37be99be2&t=1598106204" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+        </view>
+    </view>
+    <view class="flex" hover-class="none" hover-stop-propagation="false">
+        <view class="btn btn_down" hover-class="none" hover-stop-propagation="false" bind:tap="download">
+            <image class="" src="../../images/download.png" mode="widthFix"></image>
+            <text class="" selectable="false" space="false" decode="false">下载图片</text>
+        </view>
+    </view>
+    <view class="bottom" hover-class="none" hover-stop-propagation="false">
+        <image class="" src="../../images/school_name.png" mode="widthFix"></image>
+    </view>
+</view>

@@ -1,0 +1,4 @@
+<!-- components/toast/toast.wxml -->
+<view class='toast' wx:if="{{visible}}">
+    <view class="" wx:for="{{message}}">{{item}}</view>
+</view>

@@ -1,0 +1,71 @@
+/* pages/spotList/spotList.wxss */
+.mainBg{
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/D_01.png?sign=69c19f389d4bd6d8fb758667b5857f98&t=1597755958');
+    background-size: 100% 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 350rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.tabBar{
+    width: 620rpx;
+    height: 78rpx;
+    border-radius: 39rpx;
+    background-color: #ffd594;
+    color: #133b49;
+    margin: 50rpx auto;
+    display: flex;
+
+}
+.tab{
+    width: 50%;
+    text-align: center;
+    line-height: 78rpx;
+    font-size: 40rpx;
+}
+.tab.active{
+   background-color: #133b49; 
+   color: #fff;
+   border-radius: 39rpx;
+}
+.spot_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100rpx 60rpx;
+}
+.item{
+    margin-right: 55rpx;
+    margin-bottom: 155rpx;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E5%9C%B0%E5%9B%BE.png?sign=4213a096d5cd5315a780201b7e129369&t=1597760835');
+    background-size: contain;
+    width: 284rpx;
+    height: 218rpx;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.item image{
+   height: 80%;
+}
+.item text{
+    position: absolute;
+    bottom: -50rpx;
+    width: 100%;
+    text-align: center;
+}
+.item:nth-child(2n){
+    margin-right: 0;
+}
+.bottom{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 170rpx;
+   
+}
+.bottom image{
+    width: 235rpx;
+}

@@ -1,0 +1,219 @@
+.detail {
+  background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%9C%80%E6%9C%80%E5%BA%95%20-%20%E5%A4%87%E6%B3%A8%EF%BC%88%E5%AE%BD%E5%BA%A6%E4%B8%80%E5%AE%9A%EF%BC%8C%E9%95%BF%E5%BA%A6%E9%9A%8F%E9%A1%B5%E9%9D%A2%E6%8B%89%E9%95%BF%E5%9B%BE%E7%89%87%EF%BC%89.png?sign=221886751bb44f62fcd4401737f156bc&t=1597646894');
+  background-size: 100% 100%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 350rpx;
+  box-sizing: border-box;
+}
+.detail .back {
+  width: 100rpx;
+  position: fixed;
+  top: 49rpx;
+  left: 15rpx;
+  z-index: 999;
+}
+.detail.min {
+  height: 100vh;
+  background-color: raba(255, 255, 255, 0.5);
+}
+.detail .header {
+  width: 100%;
+  box-sizing: border-box;
+  height: 490rpx;
+  background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E7%82%B9%E4%BD%8D%E8%AF%A6%E6%83%85%20%E5%A4%B4.png?sign=b70b901a20894b4d11afb60abcda0af5&t=1597646464');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 0 0 50rpx 50rpx;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail .header image {
+  width: 415rpx;
+}
+.detail .title {
+  font-size: 56rpx;
+  color: #2a1e4f;
+  text-align: center;
+  margin-top: 40rpx;
+  margin-bottom: 60rpx;
+}
+.scroll_view {
+  white-space: nowrap;
+  padding: 0 20rpx;
+}
+.scroll_view .item {
+  height: 412rpx;
+  border: 3rpx solid #fff;
+  border-radius: 26rpx;
+  display: inline-block;
+  margin-right: 40rpx;
+  overflow: hidden;
+}
+.scroll_view .item image {
+  height: 100%;
+  display: inline-block;
+}
+.sub_item {
+  padding: 0 60rpx;
+  margin-top: 35rpx;
+}
+.sub_item .sub_title {
+  color: #2a1e4f;
+  font-size: 36rpx;
+  margin-bottom: 35rpx;
+}
+.sub_item .sub_image {
+  margin-bottom: 35rpx;
+  text-align: center;
+}
+.sub_item .sub_image image {
+  width: 553rpx;
+}
+.sub_item .sub_content {
+  color: #000;
+  font-size: 30rpx;
+}
+.sub_item .sub_content .text {
+  margin-bottom: 68rpx;
+}
+.sub_item .btns {
+  display: flex;
+  justify-content: space-around;
+}
+.sub_item .btns .btn {
+  border-radius: 30rpx;
+  border: 2rpx solid #2a1e4f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 172rpx;
+  height: 60rpx;
+}
+.sub_item .btns .btn image {
+  width: 12rpx;
+}
+.sub_item .btns .btn text {
+  font-size: 28rpx;
+  color: #2a1e4f;
+  margin-left: 12rpx;
+}
+.bottom {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 170rpx;
+}
+.bottom image {
+  width: 235rpx;
+}
+.fix_item {
+  display: flex;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #fff;
+  align-items: center;
+  width: 204rpx;
+  height: 74rpx;
+  background-color: #443c5e;
+  border-radius: 0 35rpx 35rpx 0;
+  position: fixed;
+}
+.fix_item.bottom_fix {
+  border-radius: 35rpx 0 0 35rpx;
+  position: absolute;
+  bottom: 340rpx;
+  right: 0;
+}
+.fix_item.top_fix {
+  top: 635rpx;
+  left: 0;
+}
+.fix_item text {
+  margin-left: 12rpx;
+}
+.fix_item image {
+  width: 33rpx;
+}
+.swapper {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  padding-top: 150rpx;
+  left: 0;
+  width: 100%;
+  z-index: 333;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.swapper .scroll_swap {
+  white-space: nowrap;
+  padding: 0 20rpx;
+}
+.swapper .swap_item {
+  height: 900rpx;
+  border-radius: 20rpx;
+  border: 6rpx solid #fff;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 40rpx;
+}
+.swapper .swap_item image {
+  height: 100%;
+}
+.modal {
+  width: 540rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15rpx;
+  padding: 50rpx;
+  box-sizing: border-box;
+  z-index: 999;
+  text-align: center;
+}
+.modal .main_img {
+  width: 436rpx;
+  margin-bottom: 72rpx;
+}
+.modal .btn_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal .btn_list .btn {
+  width: 150rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid #2a1e4f;
+  color: #fff;
+  background-color: #2a1e4f;
+  font-size: 28rpx;
+  border-radius: 32rpx;
+  margin: 0 10rpx;
+}
+.modal .btn_list .btn.cancel_btn {
+  color: #2a1e4f;
+  background-color: #e5e1e6;
+}
+.modal .btn_list .btn text {
+  margin-left: 10rpx;
+}
+.modal .btn_list .btn image {
+  width: 24rpx;
+}
+.bg {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.4);
+}
