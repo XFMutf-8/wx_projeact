@@ -31,6 +31,9 @@
         image{
             width: 415rpx;
         }
+        .infoHeadImg{
+            max-height: 400rpx;
+        }
     }
     .title{
         font-size: 56rpx;
@@ -40,9 +43,10 @@
         margin-bottom: 60rpx;
     }
 }
-.scroll_view{
+.scroll_view{ 
     white-space: nowrap;
     padding: 0 20rpx;
+    box-sizing: border-box;
     .item{
         // width: 296rpx;
         height: 412rpx;
@@ -54,11 +58,9 @@
         &:last-child{
             // margin-right: 0;
         }
-        
         image{
             height: 100%;
             display: inline-block;
-
         }
     }
 }

@@ -43,6 +43,7 @@
 .scroll_view {
   white-space: nowrap;
   padding: 0 20rpx;
+  box-sizing: border-box;
 }
 .scroll_view .item {
   height: 412rpx;
@@ -151,6 +152,7 @@
 .swapper .scroll_swap {
   white-space: nowrap;
   padding: 0 20rpx;
+  box-sizing: border-box;
 }
 .swapper .swap_item {
   height: 900rpx;
