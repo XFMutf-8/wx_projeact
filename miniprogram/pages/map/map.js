@@ -25,22 +25,23 @@ Page({
    */
   onLoad: function (options) {
     var appInst =  getApp();
-    console.log(appInst,'app')
+    // console.log(appInst,'app')
     this.setData({
       pixelRatio : appInst.globalData.pixelRatio
     })
-
   },
-  goDetail(){
+  goDetail(event){
+    // console.log(event.target.id); 
+    let currentId = event.target.id
     wx.navigateTo({
-      url: '/pages/detail/detail',
+      url: '/pages/detail/detail?currentId='+currentId,
       success: (result)=>{
         
       },
       fail: ()=>{},
       complete: ()=>{}
     });
-
+    
   },
 
   /**

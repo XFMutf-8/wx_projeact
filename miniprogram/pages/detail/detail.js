@@ -1,12 +1,18 @@
 // pages/detail/detail.js
+var jsonData = require('./main.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    itemList: [1, 2, 4, 5, 6, 7],
-    contentList: [{
+    infoHeadImgUrl: '',
+    itemList: [
+      "https://qny.shabula.com/img/xiaoxunbaoding0.jpg",
+      "https://qny.shabula.com/img/xiaoxunbaoding1.jpg"
+    ],
+    contentList: [
+      {
         content: '2007年8月，由北京大成律师事务所捐赠的校训宝鼎落成于昌平校区礼堂南侧。校训宝鼎底座高三十公分，有九块方石拼合而成，意为三九之尊，更显其庄严厚重。总高3.2米，外径2.5米，内径宽1.9米，深1.0米，材质为锡青铜，由北京大成律师事务所捐赠。'
       },
       {
@@ -21,15 +27,53 @@ Page({
     schoolPlay: false,
     isShowSwap: false,
     isShowModal : false,
-    message : ['不在地点范围内，打卡失败']
-
+    message: ['不在地点范围内，打卡失败'],
+    mainInfo: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // console.log(options.currentId) //json获取当前页面信息
+    let current = options.currentId
+    if(current == 'a'){  //宝鼎
+      this.setData({
+        mainInfo: jsonData.dataList[12]
+      })   
+    }else if(current == 'b'){ //法镜
+      this.setData({
+        mainInfo: jsonData.dataList[0]
+      })
+    }else if(current == 'c'){ //铜像
+      this.setData({
+        mainInfo: jsonData.dataList[9]
+      })
+    }else if(current == 'd'){ //拓荒牛
+      this.setData({
+        mainInfo: jsonData.dataList[11]
+      })
+    }else if(current == 'e'){ //孔子神像
+      this.setData({
+        mainInfo: jsonData.dataList[7]
+      })
+    }else if(current == 'f'){ //谢觉哉
+      this.setData({
+        mainInfo: jsonData.dataList[13]
+      })
+    }else if(current == 'g'){ //海子石
+      this.setData({
+        mainInfo: jsonData.dataList[5]
+      })
+    }else if(current == 'h'){ //雷洁琼
+      this.setData({
+        mainInfo: jsonData.dataList[8]
+      })
+    }else if(current == 'i'){ //彭真
+      this.setData({
+        mainInfo: jsonData.dataList[10]
+      })
+    }
   },
   changeNormalPlay() {
     this.setData({
