@@ -7,6 +7,17 @@ Page({
   data: {
 
   },
+  goHome(){
+    this.setData({
+      isGoHome : true
+    })
+    let time = setTimeout(() => {
+      clearTimeout(time)
+      wx.switchTab({
+        url: '/pages/home/home',
+      })
+    },1500)
+  },
 
   /**
    * 生命周期函数--监听页面加载

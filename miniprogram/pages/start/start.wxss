@@ -13,12 +13,37 @@
     color: #133a49;
     width: 256rpx;
     height: 98rpx;
-    border: 7rpx solid #fff;
-    line-height: 84rpx;
+    background-repeat: no-repeat;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E7%BB%84%20145.png?sign=771a55f37699fa206f21769945347511&t=1599184495');
+    background-size: contain;
+    line-height: 88rpx;
     text-align: center;
     font-weight: 600;
-    border-radius: 50rpx;
     z-index: 100;
+}
+@keyframes fade{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes toTop{
+    from{
+        top: -10%;
+    }
+    to{
+        top: -20%;
+    }
+}
+@keyframes toBottom{
+    from{
+        bottom: -10%;
+    }
+    to{
+        bottom: -20%;
+    }
 }
 @keyframes animate1{
     0%{
@@ -124,6 +149,35 @@
 .bg6 {
     z-index: 5;
     height: 50%;
-    bottom: 0;
+    bottom: -10%;
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L6.png?sign=368af8d23778b82576871fb89a20854f&t=1599144680');
+}
+.home .bg2,.home .bg3,.home .bg4{
+    animation: fade 1.5s;
+}
+.home .bg5{
+    animation: toTop 1.5s;  
+}
+.home .bg6{
+    animation: toBottom 1.5s;  
+}
+.home .name{
+    position: absolute;
+    top: 400rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 300rpx;
+}
+.home .btn{
+    display: none;
+}
+.home text{
+    position: absolute;
+    bottom: 300rpx;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    font-size: 38rpx;
+    color: #ea9b8b;
 }

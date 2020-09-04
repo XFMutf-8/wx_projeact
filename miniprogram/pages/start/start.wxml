@@ -1,12 +1,14 @@
 <!-- pages/start/start.wxml -->
-<view class="mianBg" hover-class="none" hover-stop-propagation="false">
+<view class="{{isGoHome?'mianBg home' : 'mianBg'}}" hover-class="none" hover-stop-propagation="false">
     <view class="bg1" hover-class="none" hover-stop-propagation="false"></view>
     <view class="bg2" hover-class="none" hover-stop-propagation="false"></view>
     <view class="bg3" hover-class="none" hover-stop-propagation="false"></view>
     <view class="bg4" hover-class="none" hover-stop-propagation="false"></view>
     <view class="bg5" hover-class="none" hover-stop-propagation="false"></view>
     <view class="bg6" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="btn" hover-class="none" hover-stop-propagation="false">
+    <view class="btn" bindtap="goHome">
        进入 
     </view>
+    <image src="../../images/name.png" mode="widthFix" class="name"></image>
+    <text>加载中...</text>
 </view>
