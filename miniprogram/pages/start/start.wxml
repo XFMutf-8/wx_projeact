@@ -1,0 +1,12 @@
+<!-- pages/start/start.wxml -->
+<view class="mianBg" hover-class="none" hover-stop-propagation="false">
+    <view class="bg1" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="bg2" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="bg3" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="bg4" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="bg5" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="bg6" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="btn" hover-class="none" hover-stop-propagation="false">
+       进入 
+    </view>
+</view>

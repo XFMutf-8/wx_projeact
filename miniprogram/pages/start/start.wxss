@@ -1,0 +1,129 @@
+/* pages/start/start.wxss */
+.mianBg {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/D_01.png?sign=9eb5e3e91e020708dd13adba43756ad6&t=1599150600');
+}
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #133a49;
+    width: 256rpx;
+    height: 98rpx;
+    border: 7rpx solid #fff;
+    line-height: 84rpx;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 50rpx;
+    z-index: 100;
+}
+@keyframes animate1{
+    0%{
+        top : 0;
+        left : 0;
+    }
+    50%{
+        top : -15rpx;
+        left: -15rpx;
+    }
+    100% {
+        top : 0;
+        left : 0; 
+    }
+
+}
+@keyframes animate2{
+    0%{
+        top: -10%;
+        left: -10%;
+    }
+    50%{
+        top : -9%;
+        left: -9%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+
+}
+@keyframes animate3{
+    0%{
+        top: -10%;
+        left: -10%;
+    }
+    50%{
+        top : -11%;
+        left: -11%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+
+}
+
+.bg1,
+.bg2,
+.bg3,
+.bg4,
+.bg5,
+.bg6 {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: -10% -10%; */
+}
+
+.bg1 {
+
+    background-size: 116% 100%;
+    background-position:-150rpx -110rpx; 
+    animation: animate1 2.5s infinite;
+    top: -10%;
+    left: -10%;
+    z-index: 10;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L1.png?sign=8ea0fbc0f71c65f75f1a0f36f20a7387&t=1599144054');
+}
+
+.bg2 {
+    top: -10%;
+    left: -10%;
+    z-index: 9;
+    animation: animate2 2.5s infinite ease-out;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2.png?sign=e4ca481baa7cec44041c9cb8bfd95f78&t=1599144231');
+}
+
+.bg3 {
+    top: -10%;
+    left: -10%;
+    z-index: 8;
+    animation: animate2 2.5s infinite ease-out;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3.png?sign=20c6a9f1e24ed14de2bb37cae93de72a&t=1599144399');
+}
+
+.bg4 {
+    top: -10%;
+    left: -10%;
+    z-index: 7;
+    animation: animate3 2.5s infinite ease-out;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4.png?sign=732f1cf1d8fcd3e6d622276f9d8e5f63&t=1599144453');
+}
+
+.bg5 {
+    z-index: 6;
+    height: 50%;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L5.png?sign=438d06d61935281307fe06236acc5dfc&t=1599144657');
+}
+
+.bg6 {
+    z-index: 5;
+    height: 50%;
+    bottom: 0;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L6.png?sign=368af8d23778b82576871fb89a20854f&t=1599144680');
+}
