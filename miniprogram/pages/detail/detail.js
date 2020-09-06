@@ -74,6 +74,31 @@ Page({
         mainInfo: jsonData.dataList[10]
       })
     }
+    else if(current == 'j'){ //1-3号楼
+      this.setData({
+        mainInfo: jsonData.dataList[4]
+      })
+    }
+    else if(current == 'k'){ //湖心亭
+      this.setData({
+        mainInfo: jsonData.dataList[6]
+      })
+    }
+    else if(current == 'l'){ //扬帆
+      this.setData({
+        mainInfo: jsonData.dataList[14]
+      })
+    }
+    else if(current == 'm'){ //法治天下
+      this.setData({
+        mainInfo: jsonData.dataList[3]
+      })
+    }
+    else if(current == 'n'){ //钱端升
+      this.setData({
+        mainInfo: jsonData.dataList[10]
+      })
+    }
   },
   changeNormalPlay() {
     this.setData({
