@@ -69,3 +69,8 @@
 .bottom image{
     width: 235rpx;
 }
+.litimg{
+    width: 160rpx!important;
+    height: 160rpx!important;
+    margin: auto;
+}

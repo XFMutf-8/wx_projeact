@@ -146,10 +146,8 @@ var json = [
     "name": "qianruisheng",
     "realName": "钱端升纪念馆",
     "imgUrl": [
-      "https://qny.shabula.com/img/qianruisheng0.jpg",
       "https://qny.shabula.com/img/qianruisheng1.jpg",
-      "https://qny.shabula.com/img/qianruisheng2.jpg",
-      "https://qny.shabula.com/img/qianruisheng3.jpg"
+      "https://qny.shabula.com/img/qianruisheng2.jpg"
     ],
     "txt": [
       "为纪念中国政法大学前身——北京政法学院首任院长钱端升，中国政法大学钱端升纪念馆2007年开始筹办，经过多年的文献整理、史料挖掘、实物收集，在学校和钱端升先生家人共同努力下，2017年5月正式建成开馆。钱端升（1900年2月25日－1990年1月21日），字寿朋，生于上海，中国著名法学家、政治学家、社会活动家。他17岁考入清华学校，19岁被选送美国留学，24岁获美国哈佛大学博士学位。回国后，相继在清华大学、北京大学、中央大学、西南联合大学等校任教。新中国成立后，钱端升任北京大学校务委员会委员、法学院院长。1952年院系调整，受命筹建北京政法学院(今中国政法大学)，并出任首任院长。",
@@ -163,7 +161,7 @@ var json = [
     "name": "tuohuangniu",
     "realName": "拓荒牛",
     "imgUrl": [
-      "https://qny.shabula.com/img/tuohuanniu0.jpg",
+      "https://qny.shabula.com/img/tuohuaniu0.jpg",
       "https://qny.shabula.com/img/tuohuangniu1.jpg"
     ],
     "txt": [
@@ -216,7 +214,21 @@ var json = [
     "videoUrl": "",
     "lon": "116.357165",
     "lat": "39.971569"
-  }
+  },
+  {
+    "name": "qianruishengs",
+    "realName": "钱端升铜像",
+    "imgUrl": [
+      "https://qny.shabula.com/img/qianruisheng0.jpg",
+      "https://qny.shabula.com/img/qianruisheng3.JPG",
+    ],
+    "txt": [
+      "2002年5月，由湖南校友会、56级6班、1969年赴藏全体校友捐赠的钱端升铜像落成于昌平校区喷泉池西侧，自建成以来，一直默默地守护着法大。钱端升（1900年2月25日－1990年1月21日），字寿朋，中国著名法学家、政治学家、社会活动家。他17岁考入清华学校，19岁被选送美国留学，24岁获美国哈佛大学博士学位。回国后，相继在清华大学、北京大学、中央大学、西南联合大学等校任教。新中国成立后，钱端升任北京大学校务委员会委员、法学院院长。1952年院系调整，受命筹建北京政法学院(今中国政法大学)，并出任首任院长。1954年参与第一部《中华人民共和国宪法》的起草工作。实现中国的政治进步、制度昌明，这是钱老一生的愿望，而沐浴在钱老目光下的法大学子们，也必将沿着时代的轨迹，将钱老的愿望变成现实。"
+    ],
+    "videoUrl": "",
+    "lon": "116.252312",
+    "lat": "40.228581"
+  },
 ]
 
 module.exports = {

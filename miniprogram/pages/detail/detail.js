@@ -71,9 +71,9 @@ Page({
       this.setData({
         mainInfo: jsonData.dataList[0]
       })
-    }else if(current == 'c'){ //铜像
+    }else if(current == 'c'){ //钱端升铜像
       this.setData({
-        mainInfo: jsonData.dataList[9]
+        mainInfo: jsonData.dataList[15]
       })
     }else if(current == 'd'){ //拓荒牛
       this.setData({
@@ -97,7 +97,7 @@ Page({
       })
     }else if(current == 'i'){ //彭真
       this.setData({
-        mainInfo: jsonData.dataList[10]
+        mainInfo: jsonData.dataList[9]
       })
     }
     else if(current == 'j'){ //1-3号楼
@@ -120,7 +120,7 @@ Page({
         mainInfo: jsonData.dataList[3]
       })
     }
-    else if(current == 'n'){ //钱端升
+    else if(current == 'n'){ //钱端升纪念馆
       this.setData({
         mainInfo: jsonData.dataList[10]
       })

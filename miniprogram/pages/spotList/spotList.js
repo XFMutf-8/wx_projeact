@@ -1,4 +1,5 @@
 // pages/spotList/spotList.js
+var dataList = require('./spotMain.js');
 Page({
 
   /**
@@ -8,21 +9,45 @@ Page({
     curIndex : '1',
     haidian : 'cloud://severless-om62w.7365-severless-om62w-1302847609/backImage/列表，海淀图标背景.png',
     changping : 'cloud://severless-om62w.7365-severless-om62w-1302847609/backImage/列表，昌平图标背景.png',
-    itemList : [1,2,3,4,4,3,3]
+    itemList : [1,2,3,4,4,3,3],
+    mainInfo: []
   },
   changeTab(e){
     let index = e.currentTarget.dataset.index
+    // console.log(index)
     this.setData({
       curIndex : index
     })
-
+    if(index == '1'){
+      this.setData({
+        mainInfo : dataList.dataList[0].dataList
+      })
+    }else{
+      this.setData({
+        mainInfo : dataList.dataList[1].dataList
+      })
+    }
   },
-
+  goDetail(event){
+    // console.log(event)
+    let currentId = event.target.id
+    wx.navigateTo({
+      url: '/pages/detail/detail?currentId='+currentId,
+      success: (result)=>{
+        
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // console.log(dataList.dataList)
+    this.setData({
+      mainInfo : dataList.dataList[0].dataList
+    })
   },
 
   /**

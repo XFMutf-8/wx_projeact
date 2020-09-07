@@ -9,10 +9,11 @@
         </view>
     </view>
     <view class="spot_list" hover-class="none" hover-stop-propagation="false">
-        <view class="item" wx:for="{{itemList}}">
-            <image mode="widthFix" wx:if='{{curIndex === "1"}}' src="{{haidian}}"  lazy-load="false" binderror="" bindload=""></image>
-             <image mode="aspectFit" wx:if='{{curIndex === "2"}}' src="{{changping}}"  lazy-load="false" binderror="" bindload=""></image>
-            <text class="" selectable="false" space="false" decode="false">拓荒牛</text>
+        <view class="item" wx:for="{{mainInfo}}">
+            <!-- <image mode="widthFix" wx:if='{{curIndex === "1"}}' src="{{haidian}}"  lazy-load="false" binderror="" bindload=""></image> -->
+            <!-- <image mode="aspectFit" wx:if='{{curIndex === "2"}}' src="{{changping}}"  lazy-load="false" binderror="" bindload=""></image> -->
+            <image id="{{item.id}}" class="litimg" mode="widthFix" src="{{item.imageUrl}}"  lazy-load="false" binderror="" bindload="" bind:tap="goDetail"></image>
+            <text class="" selectable="false" space="false" decode="false">{{item.name}}</text>
         </view>
     </view>
      <view class="bottom" hover-class="none" hover-stop-propagation="false">
