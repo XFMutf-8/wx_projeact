@@ -11,8 +11,7 @@ Page({
       "https://qny.shabula.com/img/xiaoxunbaoding0.jpg",
       "https://qny.shabula.com/img/xiaoxunbaoding1.jpg"
     ],
-    contentList: [
-      {
+    contentList: [{
         content: '2007年8月，由北京大成律师事务所捐赠的校训宝鼎落成于昌平校区礼堂南侧。校训宝鼎底座高三十公分，有九块方石拼合而成，意为三九之尊，更显其庄严厚重。总高3.2米，外径2.5米，内径宽1.9米，深1.0米，材质为锡青铜，由北京大成律师事务所捐赠。'
       },
       {
@@ -22,11 +21,11 @@ Page({
         content: '吾学之兴历五十余载，训育之文初无所定，然大学精神，遞传不替。二〇〇二年四月，校训初成。厚德明法，格物致公。恒追高远，永为仪则。吾学之宗，由是灼然。今铸鼎勒铭，名著来者。（基座铭文摘抄）.2米，外径2.5米，内径宽1.9米，深1.0米，材质为锡青铜，由北京大成律师事务所捐赠。'
       }
     ],
-    scrollUrl : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E5%9B%BE%E7%89%872.png?sign=d39519f845f829daa6efeb343869f25f&t=1597649915',
+    scrollUrl: 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E5%9B%BE%E7%89%872.png?sign=d39519f845f829daa6efeb343869f25f&t=1597649915',
     normalPlay: false,
     schoolPlay: false,
     isShowSwap: false,
-    isShowModal : false,
+    isShowModal: false,
     message: ['不在地点范围内，打卡失败'],
     mainInfo: []
   },
@@ -35,7 +34,7 @@ Page({
     console.log(data)
     db.collection('my_spot_image').add({
       data: {
-        imageUrl : data.fileID
+        imageUrl: data.fileID
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id
@@ -63,64 +62,59 @@ Page({
   onLoad: function (options) {
     // console.log(options.currentId) //json获取当前页面信息
     let current = options.currentId
-    if(current == 'a'){  //宝鼎
+    if (current == 'a') { //宝鼎
       this.setData({
         mainInfo: jsonData.dataList[12]
-      })   
-    }else if(current == 'b'){ //法镜
+      })
+    } else if (current == 'b') { //法镜
       this.setData({
         mainInfo: jsonData.dataList[0]
       })
-    }else if(current == 'c'){ //钱端升铜像
+    } else if (current == 'c') { //钱端升铜像
       this.setData({
         mainInfo: jsonData.dataList[15]
       })
-    }else if(current == 'd'){ //拓荒牛
+    } else if (current == 'd') { //拓荒牛
       this.setData({
         mainInfo: jsonData.dataList[11]
       })
-    }else if(current == 'e'){ //孔子神像
+    } else if (current == 'e') { //孔子神像
       this.setData({
         mainInfo: jsonData.dataList[7]
       })
-    }else if(current == 'f'){ //谢觉哉
+    } else if (current == 'f') { //谢觉哉
       this.setData({
         mainInfo: jsonData.dataList[13]
       })
-    }else if(current == 'g'){ //海子石
+    } else if (current == 'g') { //海子石
       this.setData({
         mainInfo: jsonData.dataList[5]
       })
-    }else if(current == 'h'){ //雷洁琼
+    } else if (current == 'h') { //雷洁琼
       this.setData({
         mainInfo: jsonData.dataList[8]
       })
-    }else if(current == 'i'){ //彭真
+    } else if (current == 'i') { //彭真
       this.setData({
         mainInfo: jsonData.dataList[9]
       })
-    }
-    else if(current == 'j'){ //1-3号楼
+    } else if (current == 'j') { //1-3号楼
       this.setData({
         mainInfo: jsonData.dataList[4]
       })
-    }
-    else if(current == 'k'){ //湖心亭
+    } else if (current == 'k') { //湖心亭
       this.setData({
         mainInfo: jsonData.dataList[6]
       })
-    }
-    else if(current == 'l'){ //扬帆
+    } else if (current == 'l') { //扬帆
       this.setData({
         mainInfo: jsonData.dataList[14]
       })
-    }
-    else if(current == 'm'){ //法治天下
+    } else if (current == 'm') { //法治天下
       this.setData({
         mainInfo: jsonData.dataList[3]
       })
-    }
-    else if(current == 'n'){ //钱端升纪念馆
+    } else if (current == 'n') { //钱端升纪念馆
       this.setData({
         mainInfo: jsonData.dataList[10]
       })
@@ -155,22 +149,22 @@ Page({
       'longitude': 116.30749
     });
     let endPoint = JSON.stringify({ //终点
-      'name': '中国政法大学',
-      'latitude': 39.894806,
-      'longitude': 116.321592
+      'name': this.data.mainInfo.realName,
+      'latitude': this.data.mainInfo.lat,
+      'longitude': this.data.mainInfo.lon
     });
     wx.navigateTo({
       url: 'plugin://routePlan/route-plan?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
     });
 
   },
-  showModal(){
+  showModal() {
     this.setData({
-      isShowModal : !this.data.isShowModal
+      isShowModal: !this.data.isShowModal
     })
 
   },
-  startCamera(){
+  startCamera() {
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],
@@ -185,50 +179,65 @@ Page({
       }
     })
   },
-  goBack(){
+  goBack() {
     wx.navigateBack({
       delta: 1
     });
   },
-  getPosition(){
+  getPosition() {
     wx.getLocation({
       type: 'wgs84',
-      success:  (res) => {
+      success: (res) => {
         console.log(res);
-        this.setData({
-          latitude: res.latitude,
-          longitude: res.longitude
-        })
-        const filePath = this.data.tempFilePaths[0]
-        // 上传图片
-        const cloudPath = 'myImage/' + new Date().getTime() + filePath.match(/\.[^.]+?$/)[0]
-        wx.cloud.uploadFile({
-          cloudPath,
-          filePath,
-          success: res => {
-            console.log('[上传文件] 成功：', res)
-            // app.globalData.fileID = res.fileID
-            // app.globalData.cloudPath = cloudPath
-            // app.globalData.imagePath = filePath
-            this.onAdd(res)
-          },
-          fail: e => {
-            console.error('[上传文件] 失败：', e)
-            wx.showToast({
-              icon: 'none',
-              title: '上传失败',
-            })
-          },
-          complete: () => {
-            wx.hideLoading()
-          }
-        })
-        // this.selectComponent('#toast').showToast()
-        this.setData({
-          isShowModal : false
-        })
+        let curLat = res.latitude * 1000000
+        let curLon = res.longitude * 1000000
+        let lat = this.data.mainInfo.lat * 1000000
+        let lon = this.data.mainInfo.lon * 1000000
+        console.log(curLat,curLon,lon,lat,'111111')
+        if (curLat < lat + 10 && curLat > lat - 10 && curLon > lon - 10 && curLon < lon + 10) {
+          this.setData({
+            latitude: res.latitude,
+            longitude: res.longitude
+          })
+          const filePath = this.data.tempFilePaths[0]
+          // 上传图片
+          const cloudPath = 'myImage/' + new Date().getTime() + filePath.match(/\.[^.]+?$/)[0]
+          wx.cloud.uploadFile({
+            cloudPath,
+            filePath,
+            success: res => {
+              console.log('[上传文件] 成功：', res)
+              this.selectComponent('#toast').showToast()
+              this.setData({
+                message: ['打卡成功']
+              })
+              this.onAdd(res)
+            },
+            fail: e => {
+              console.error('[上传文件] 失败：', e)
+              this.selectComponent('#toast').showToast()
+              this.setData({
+                message: ['[上传文件] 失败']
+              })
+            },
+            complete: () => {
+              wx.hideLoading()
+            }
+          })
+          // this.selectComponent('#toast').showToast()
+          this.setData({
+            isShowModal: false
+          })
+        }else{
+          this.selectComponent('#toast').showToast()
+              this.setData({
+                message: ['不在打卡范围内'],
+                isShowModal : false
+              })
+        }
+       
       },
-      fail: (res) =>{
+      fail: (res) => {
         console.log(res);
       }
     })
