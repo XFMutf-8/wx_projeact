@@ -6,7 +6,7 @@
     <block wx:if="{{!isShowModal}}">
         <view class="header" hover-class="none" hover-stop-propagation="false">
             <!-- <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E7%82%B9%E4%BD%8D%E8%AF%A6%E6%83%85%20%E7%89%A9.png?sign=6e71a22b905f159e461b4995750293e7&t=1597647268" mode="widthFix" lazy-load="false" binderror="" bindload=""></image> -->
-            <image class="infoHeadImg" src="{{mainInfo.imgUrl[0]}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <image class="infoHeadImg" src="{{mainInfo.headImg}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
         </view>
         <view class="title" hover-class="none" hover-stop-propagation="false">{{mainInfo.realName}}</view>
         <scroll-view class="scroll_view" scroll-x="true" scroll-y="false" bind:tap="showSwap">
