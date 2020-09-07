@@ -10,7 +10,8 @@
     </view>
     <view class="spot_list" hover-class="none" hover-stop-propagation="false">
         <view class="item" wx:for="{{itemList}}">
-            <image mode="aspectFit" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E7%82%B9%E4%BD%8D%E8%AF%A6%E6%83%85%20%E7%89%A9.png?sign=601b6ed96e82db1d5086be7136b9ada5&t=1597761596"  lazy-load="false" binderror="" bindload=""></image>
+            <image mode="widthFix" wx:if='{{curIndex === "1"}}' src="{{haidian}}"  lazy-load="false" binderror="" bindload=""></image>
+             <image mode="aspectFit" wx:if='{{curIndex === "2"}}' src="{{changping}}"  lazy-load="false" binderror="" bindload=""></image>
             <text class="" selectable="false" space="false" decode="false">拓荒牛</text>
         </view>
     </view>

@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "toast" : "/components/toast/toast",
+    "Modal" : "/components/myModal/myModal"
+  },
   "navigationStyle": "custom"
 }

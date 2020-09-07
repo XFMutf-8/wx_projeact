@@ -25,7 +25,7 @@
 }
 .btn {
   border-radius: 30rpx;
-  border: 2rpx solid #2a1e4f;
+  border: 2rpx solid #133B49;
   color: #fff;
   display: flex;
   align-items: center;
@@ -36,10 +36,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  background-color: #fff;
 }
 .btn.btn_down {
   position: relative;
-  background-color: #2a1e4f;
+  background-color: #147483;
+  border-color: #147483;
 }
 .btn.btn_down image {
   width: 26rpx;
@@ -53,15 +55,15 @@
 }
 .btn text {
   font-size: 28rpx;
-  color: #2a1e4f;
+  color: #133B49;
   margin-left: 12rpx;
 }
 .my_map {
-  width: 690rpx;
-  background-color: #e5e1e6;
+  width: 100%;
+  background-color: #FFD594;
   border-radius: 16rpx;
-  padding: 26rpx;
-  margin: 0 auto;
+  padding: 26rpx 56rpx;
+  margin-bottom: 74rpx;
 }
 .my_photo {
   width: 690rpx;
@@ -78,7 +80,7 @@
 }
 .title text {
   font-size: 30rpx;
-  color: #2a1e4f;
+  color: #133B49;
 }
 .photo_list {
   display: flex;
@@ -88,9 +90,11 @@
 }
 .photo_list .item {
   width: 255rpx;
-  overflow: hidden;
-  background-color: #fff;
   border-radius: 16rpx;
+  overflow: hidden;
+  height: 440rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
 }
 .photo_list .item image {
   width: 100%;
@@ -103,4 +107,10 @@
 }
 .bottom image {
   width: 235rpx;
+}
+.maptitle {
+  color: #133B49;
+  font-size: 28rpx;
+  display: block;
+  text-align: center;
 }

@@ -21,12 +21,12 @@
                 <image class="" src="../../images/1.png" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
             </view>
             <view class="btns" hover-class="none" hover-stop-propagation="false">
-                <view class="btn" hover-class="none" hover-stop-propagation="false" bind:tap="changeNormalPlay">
+                <view class="{{normalPlay?'btn' : 'btn active'}}" hover-class="none" hover-stop-propagation="false" bind:tap="changeNormalPlay">
                     <image class="" src="../../images/pause.png" mode="widthFix" wx:if="{{!normalPlay}}"></image>
                     <image class="" src="../../images/play.png" mode="widthFix" wx:else></image>
                     <text class="">普通版</text>
                 </view>
-                <view class="btn" hover-class="none" hover-stop-propagation="false" bind:tap="changeSchoolPlay">
+                <view class="{{schoolPlay?'btn' : 'btn active'}}" hover-class="none" hover-stop-propagation="false" bind:tap="changeSchoolPlay">
                     <image class="" src="../../images/pause.png" mode="widthFix" wx:if="{{!schoolPlay}}"></image>
                     <image class="" src="../../images/play.png" mode="widthFix" wx:else></image>
                     <text class="">校友版</text>

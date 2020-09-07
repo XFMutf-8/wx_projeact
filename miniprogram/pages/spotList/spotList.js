@@ -6,7 +6,9 @@ Page({
    */
   data: {
     curIndex : '1',
-    itemList : [1,2,3,4,4,3,3,3,3,3,3,3,3,3,3,,3,3,3]
+    haidian : 'cloud://severless-om62w.7365-severless-om62w-1302847609/backImage/列表，海淀图标背景.png',
+    changping : 'cloud://severless-om62w.7365-severless-om62w-1302847609/backImage/列表，昌平图标背景.png',
+    itemList : [1,2,3,4,4,3,3]
   },
   changeTab(e){
     let index = e.currentTarget.dataset.index

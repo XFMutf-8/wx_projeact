@@ -21,7 +21,7 @@
   width: 100%;
   box-sizing: border-box;
   height: 490rpx;
-  background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E7%82%B9%E4%BD%8D%E8%AF%A6%E6%83%85%20%E5%A4%B4.png?sign=b70b901a20894b4d11afb60abcda0af5&t=1597646464');
+  background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E7%82%B9%E4%BD%8D%E8%AF%A6%E6%83%85%20%E5%A4%B4d.png?sign=dc7c1e4ac3766819710b3d82288c31f7&t=1599410291');
   background-repeat: no-repeat;
   overflow: hidden;
   border-radius: 0 0 50rpx 50rpx;
@@ -33,9 +33,12 @@
 .detail .header image {
   width: 415rpx;
 }
+.detail .header .infoHeadImg {
+  max-height: 400rpx;
+}
 .detail .title {
   font-size: 56rpx;
-  color: #2a1e4f;
+  color: #133B49;
   text-align: center;
   margin-top: 40rpx;
   margin-bottom: 60rpx;
@@ -43,6 +46,7 @@
 .scroll_view {
   white-space: nowrap;
   padding: 0 20rpx;
+  box-sizing: border-box;
 }
 .scroll_view .item {
   height: 412rpx;
@@ -78,6 +82,7 @@
 }
 .sub_item .sub_content .text {
   margin-bottom: 68rpx;
+  line-height: 60rpx;
 }
 .sub_item .btns {
   display: flex;
@@ -85,20 +90,24 @@
 }
 .sub_item .btns .btn {
   border-radius: 30rpx;
-  border: 2rpx solid #2a1e4f;
+  border: 2rpx solid #133B49;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 172rpx;
   height: 60rpx;
+  background-color: #D8E4E3;
+}
+.sub_item .btns .btn.active {
+  background-color: #FFD594;
 }
 .sub_item .btns .btn image {
   width: 12rpx;
 }
 .sub_item .btns .btn text {
   font-size: 28rpx;
-  color: #2a1e4f;
+  color: #133B49;
   margin-left: 12rpx;
 }
 .bottom {

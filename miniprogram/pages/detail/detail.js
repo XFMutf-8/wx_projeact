@@ -30,6 +30,32 @@ Page({
     message: ['不在地点范围内，打卡失败'],
     mainInfo: []
   },
+  onAdd: function (data) {
+    const db = wx.cloud.database()
+    console.log(data)
+    db.collection('my_spot_image').add({
+      data: {
+        imageUrl : data.fileID
+      },
+      success: res => {
+        // 在返回结果中会包含新创建的记录的 _id
+        this.setData({
+          counterId: res._id,
+        })
+        wx.showToast({
+          title: '新增记录成功',
+        })
+        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '新增记录失败'
+        })
+        console.error('[数据库] [新增记录] 失败：', err)
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -95,14 +121,6 @@ Page({
 
   },
   goRoutePlan() {
-    // wx.navigateTo({
-    //   url: 'pages/routePlan/routePlan',
-    //   success: (result)=>{
-
-    //   },
-    //   fail: ()=>{},
-    //   complete: ()=>{}
-    // });
     let plugin = requirePlugin('routePlan');
     let key = 'GXYBZ-OOIRK-XBUJ3-AEUEK-APV7Z-5NFXS'; //使用在腾讯位置服务申请的key
     let referer = '文化景观'; //调用插件的小程序的名称
@@ -156,7 +174,31 @@ Page({
           latitude: res.latitude,
           longitude: res.longitude
         })
-        this.selectComponent('#toast').showToast()
+        const filePath = this.data.tempFilePaths[0]
+        // 上传图片
+        const cloudPath = 'myImage/' + new Date().getTime() + filePath.match(/\.[^.]+?$/)[0]
+        wx.cloud.uploadFile({
+          cloudPath,
+          filePath,
+          success: res => {
+            console.log('[上传文件] 成功：', res)
+            // app.globalData.fileID = res.fileID
+            // app.globalData.cloudPath = cloudPath
+            // app.globalData.imagePath = filePath
+            this.onAdd(res)
+          },
+          fail: e => {
+            console.error('[上传文件] 失败：', e)
+            wx.showToast({
+              icon: 'none',
+              title: '上传失败',
+            })
+          },
+          complete: () => {
+            wx.hideLoading()
+          }
+        })
+        // this.selectComponent('#toast').showToast()
         this.setData({
           isShowModal : false
         })

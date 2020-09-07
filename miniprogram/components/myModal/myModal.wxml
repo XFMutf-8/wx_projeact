@@ -1,0 +1,9 @@
+<!-- myModal.wxml -->
+<view class="modal_box" id='Modal' wx:if="{{visible}}" animation="{{ModalAni}}">
+    <image class="img" src="{{url}}" mode="widthFix" lazy-load="{{true}}"></image>
+    <view class="modal_bottom" bind:tap='downLoad' data-url='{{url}}'>
+        <image class="" src="../../images/download.png" mode="widthFix"></image>
+        <text class="" selectable="false" space="false" decode="false">下载地图</text>
+    </view>
+</view>
+<view class="bg" catchtap='_hideModal' wx:if="{{visible}}"></view>

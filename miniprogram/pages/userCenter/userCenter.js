@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isPlay : false
+    isPlay : false,
+    curMap : '',
+    map1 : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%B5%B7%E6%B7%80%E8%AE%BE%E8%AE%A1%E5%9B%BE.png?sign=73d8ad3bd4b7d02566191059aef72dc9&t=1599358489',
+    map2 : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%98%8C%E5%B9%B3%E8%AE%BE%E8%AE%A1%E5%9B%BE.png?sign=786b3f1c42066b36ada10725bd969ce4&t=1599358544'
 
   },
   changePlayStatus(){
@@ -13,12 +16,130 @@ Page({
        isPlay: !this.data.isPlay
     })
   },
+  showMapModal(e){
+    console.log(e)
+    let map = e.currentTarget.dataset.url
+    this.setData({
+      curMap : map
+    })
+    this.selectComponent('#myModal')._showModal()
+   
+  },
+  onGetOpenid: function() {
+    // 调用云函数
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        console.log('[云函数] [login] user openid: ', res.result.openid)
+        getApp().globalData.openid = res.result.openid
+        this.setData({
+          openid : res.result.openid
+        })
+        this.onQuery()
+  
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+        wx.navigateTo({
+          url: '../deployFunctions/deployFunctions',
+        })
+      }
+    })
+  },
+  onQuery: function() {
+    const db = wx.cloud.database()
+    // 查询当前用户所有的 counters
+    db.collection('my_spot_image').where({
+      _openid: this.data.openid
+    }).get({
+      success: res => {
+        this.setData({
+          queryResult: JSON.stringify(res.data, null, 2),
+          dataList : res.data
+        })
+        console.log('[数据库] [查询记录] 成功: ', res)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
+      }
+    })
+  },
+
+  // 下载图片
+ downloadImgs() {
+  var _this = this
+  // 获取保存到相册权限
+  writePhotosAlbum(
+   function success() {
+    wx.showLoading({
+     title: '加载中',
+     mask: true
+    })
+    // 调用保存图片promise队列
+    _this
+     .queue(_this.data.list)
+     .then(res => {
+      wx.hideLoading()
+      wx.showToast({
+       title: '下载完成'
+      })
+     })
+     .catch(err => {
+      wx.hideLoading()
+      console.log(err)
+     })
+   },
+   function fail() {
+    wx.showToast({
+     title: '您拒绝了保存到相册'
+    })
+   }
+  )
+ },
+ // 队列
+ queue(urls) {
+  let promise = Promise.resolve()
+  urls.forEach((url, index) => {
+   promise = promise.then(() => {
+    return this.download(url)
+   })
+  })
+  return promise
+ },
+ // 下载
+ download(url) {
+  return new Promise((resolve, reject) => {
+   wx.downloadFile({
+    url: url,
+    success: function(res) {
+     var temp = res.tempFilePath
+     wx.saveImageToPhotosAlbum({
+      filePath: temp,
+      success: function(res) {
+       resolve(res)
+      },
+      fail: function(err) {
+       reject(res)
+      }
+     })
+    },
+    fail: function(err) {
+     reject(err)
+    }
+   })
+  })
+ },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
 
   /**
@@ -32,6 +153,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.onGetOpenid()
 
   },
 

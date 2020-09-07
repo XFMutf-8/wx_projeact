@@ -1,0 +1,58 @@
+/* myModal.wxss */
+#auto {
+    min-height: auto;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .7;
+    z-index: 9999;
+}
+
+.modal_box {
+    width: 560rpx;
+    height: 1000rpx;
+    background-color: #fff;
+    padding: 65rpx;
+    border-radius: 12rpx;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -280rpx;
+    z-index: 10000;
+    opacity: 0;
+}
+
+.img {
+    width: 100%;
+
+}
+
+.modal_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 172rpx;
+    height: 60rpx;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #147483;
+    border-radius: 30rpx;
+}
+
+.modal_bottom image {
+    width: 26rpx;
+}
+
+.modal_bottom text {
+    font-size: 24rpx;
+    color: #fff;
+    margin-left: 12rpx;
+}

@@ -14,12 +14,18 @@
             <text class="" selectable="false" space="false" decode="false">我的打卡地图</text>
         </view>
         <view class="photo_list" hover-class="none" hover-stop-propagation="false">
-            <view class="item" hover-class="none" hover-stop-propagation="false">
-                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/mainMap.png?sign=05304debeb59b4dde3a9b4b37be99be2&t=1598106204" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="" hover-class="none" hover-stop-propagation="false">
+                 <view class="item" hover-class="none" hover-stop-propagation="false">
+                <image class="" src="{{map1}}" mode="widthFix" id="map1" data-url='{{map1}}' bind:tap="showMapModal"></image>
             </view>
-            <view class="item" hover-class="none" hover-stop-propagation="false">
-                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/mainMap.png?sign=05304debeb59b4dde3a9b4b37be99be2&t=1598106204" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <text class="maptitle" selectable="false" space="false" decode="false">海淀地区地图</text>
             </view>
+           <view class="" hover-class="none" hover-stop-propagation="false">
+                <view class="item" hover-class="none" hover-stop-propagation="false">
+                <image class="" src="{{map2}}" mode="widthFix" data-url='{{map2}}' id="map2" bind:tap="showMapModal"></image>
+            </view>
+            <text class="maptitle" selectable="false" space="false" decode="false">昌平地区地图</text>
+           </view>
         </view>
     </view>
     <view class="my_photo" hover-class="none" hover-stop-propagation="false">
@@ -28,11 +34,8 @@
             <text class="" selectable="false" space="false" decode="false">我的打卡照片</text>
         </view>
         <view class="photo_list" hover-class="none" hover-stop-propagation="false">
-            <view class="item" hover-class="none" hover-stop-propagation="false">
-                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/mainMap.png?sign=05304debeb59b4dde3a9b4b37be99be2&t=1598106204" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
-            </view>
-            <view class="item" hover-class="none" hover-stop-propagation="false">
-                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/mainMap.png?sign=05304debeb59b4dde3a9b4b37be99be2&t=1598106204" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="item" wx:for='{{dataList}}'>
+                <image class="" src="{{item.imageUrl}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
             </view>
         </view>
     </view>
@@ -46,3 +49,5 @@
         <image class="" src="../../images/school_name.png" mode="widthFix"></image>
     </view>
 </view>
+<Modal url='{{curMap}}' id='myModal' />
+<toast message='{{message}}' id="toast"></toast>
