@@ -69,20 +69,40 @@ Page({
       }
     })
   },
+  getAllUrls(){
+    
+    let list = this.data.dataList.map(item => item.imageUrl)
+    wx.cloud.getTempFileURL({
+      fileList: list,
+      success: res => {
+        // get temp file URL
+        console.log(res.fileList)
+        this.setData({
+          fileList : res.fileList.map(item => item.tempFileURL)
+        })
+        this.downloadImgs()
+      },
+      fail: err => {
+        // handle error
+      }
+    })
+
+  },
 
   // 下载图片
  downloadImgs() {
   var _this = this
   // 获取保存到相册权限
-  writePhotosAlbum(
+  this.writePhotosAlbum(
    function success() {
     wx.showLoading({
      title: '加载中',
      mask: true
     })
     // 调用保存图片promise队列
+    console.log(_this.data.fileList,'1111')
     _this
-     .queue(_this.data.list)
+     .queue(_this.data.fileList)
      .then(res => {
       wx.hideLoading()
       wx.showToast({
@@ -134,6 +154,50 @@ Page({
    })
   })
  },
+ //保存图片到相册
+writePhotosAlbum(successFun,failFun){
+  wx.getSetting({
+    success(res) {
+      if (!res.authSetting['scope.writePhotosAlbum']) {
+        wx.authorize({
+          scope: 'scope.writePhotosAlbum',
+          success: function () {
+            successFun && successFun()
+          },
+          fail: function (res) {
+            wx.hideLoading()
+            wx.showModal({
+              title: '提示',
+              content: "小程序需要您的微信授权保存图片，是否重新授权？",
+              showCancel: true,
+              cancelText: "否",
+              confirmText: "是",
+              success: function (res2) {
+                if (res2.confirm) { //用户点击确定'
+                  wx.openSetting({
+                    success: (res3) => {
+                      if (res3.authSetting['scope.writePhotosAlbum']) {
+                        //已授权
+                        successFun && successFun()
+                      } else {
+                        failFun && failFun()
+                      }
+                    }
+                  })
+                } else {
+                  failFun && failFun()
+                }
+              }
+            });
+          }
+        })
+      } else {
+        successFun && successFun()
+      }
+    }
+  })
+},
+
 
   /**
    * 生命周期函数--监听页面加载
