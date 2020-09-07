@@ -55,8 +55,8 @@
     <view class="swapper" bind:tap="showSwap" wx:if="{{isShowSwap}}">
         <scroll-view class="scroll_swap" scroll-x="true" scroll-y="false">
             <!-- <view class="scroll_swap" style="{{width:itemList.length*}}"> -->
-            <view class="swap_item" wx:for="{{itemList}}">
-                <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E5%9B%BE%E7%89%872.png?sign=d39519f845f829daa6efeb343869f25f&t=1597649915" mode="heightFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="swap_item" wx:for="{{mainInfo.imgUrl}}">
+                <image class="" src="{{item}}" mode="heightFix" lazy-load="false" binderror="" bindload=""></image>
             </view>
             <!-- </view> -->
         </scroll-view>
