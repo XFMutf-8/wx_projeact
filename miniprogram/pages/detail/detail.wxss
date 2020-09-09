@@ -1,5 +1,5 @@
 .detail {
-  background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%9C%80%E6%9C%80%E5%BA%95%20-%20%E5%A4%87%E6%B3%A8%EF%BC%88%E5%AE%BD%E5%BA%A6%E4%B8%80%E5%AE%9A%EF%BC%8C%E9%95%BF%E5%BA%A6%E9%9A%8F%E9%A1%B5%E9%9D%A2%E6%8B%89%E9%95%BF%E5%9B%BE%E7%89%87%EF%BC%89.png?sign=221886751bb44f62fcd4401737f156bc&t=1597646894');
+  background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/D_01.png?sign=aeea9532304164b08a691ef77f006dfa&t=1599472174');
   background-size: 100% 100%;
   height: 100%;
   position: relative;
@@ -127,7 +127,7 @@
   align-items: center;
   width: 204rpx;
   height: 74rpx;
-  background-color: #443c5e;
+  background-color: #133B49;
   border-radius: 0 35rpx 35rpx 0;
   position: fixed;
 }
@@ -151,7 +151,7 @@
   height: 100%;
   position: fixed;
   top: 0;
-  padding-top: 150rpx;
+  padding-top: 300rpx;
   left: 0;
   width: 100%;
   z-index: 333;

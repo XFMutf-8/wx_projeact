@@ -32,7 +32,7 @@ Page({
     // console.log(event)
     let currentId = event.target.id
     wx.navigateTo({
-      url: '/pages/detail/detail?currentId='+currentId,
+      url: `/pages/detail/detail?currentId=${currentId}&curArea=${this.data.curIndex}`,
       success: (result)=>{
         
       },

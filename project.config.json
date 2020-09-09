@@ -25,7 +25,7 @@
 		},
 		"compileHotReLoad": false,
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx83fca98893a8fdd7",

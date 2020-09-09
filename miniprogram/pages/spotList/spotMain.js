@@ -1,6 +1,6 @@
 var spotJson = [
     {
-        id : 'haidian',
+        id : 'changping',
         dataList : [
             {
                 id: 'a',
@@ -55,7 +55,7 @@ var spotJson = [
         ]
     },
     {
-        id : 'changping',
+        id : 'haidian',
         dataList : [
             {
                 id: 'j',
@@ -89,6 +89,7 @@ var spotJson = [
             }
         ]
     }
+   
 ]
 
 module.exports = {

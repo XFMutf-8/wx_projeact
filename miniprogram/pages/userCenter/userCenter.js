@@ -8,7 +8,7 @@ Page({
     isPlay : false,
     curMap : '',
     map1 : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%B5%B7%E6%B7%80%E8%AE%BE%E8%AE%A1%E5%9B%BE.png?sign=73d8ad3bd4b7d02566191059aef72dc9&t=1599358489',
-    map2 : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%98%8C%E5%B9%B3%E8%AE%BE%E8%AE%A1%E5%9B%BE.png?sign=786b3f1c42066b36ada10725bd969ce4&t=1599358544'
+    map2 : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%98%8C%E5%B9%B3%E8%AE%BE%E8%AE%A1%E5%9B%BE.png?sign=e25c15bb9ccf0566aa2b92dabaf4d4b9&t=1599462116'
 
   },
   changePlayStatus(){
