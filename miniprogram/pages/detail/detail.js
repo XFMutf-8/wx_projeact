@@ -62,6 +62,10 @@ Page({
   onLoad: function (options) {
     // console.log(options.currentId) //json获取当前页面信息
     let current = options.currentId
+    let curArea = options.curArea || '1'
+    this.setData({
+      curArea 
+    })
     if (current == 'a') { //宝鼎
       this.setData({
         mainInfo: jsonData.dataList[12]
@@ -118,7 +122,16 @@ Page({
       this.setData({
         mainInfo: jsonData.dataList[10]
       })
+    } else if (current == 'x') { //法庭科学
+      this.setData({
+        mainInfo: jsonData.dataList[1]
+      })
+    }else if (current == 'y') { //法治广场
+      this.setData({
+        mainInfo: jsonData.dataList[2]
+      })
     }
+
   },
   changeNormalPlay() {
     this.setData({
@@ -211,6 +224,7 @@ Page({
               this.setData({
                 message: ['打卡成功']
               })
+              getApp.globalData.curMapList[this.data.curArea - 1] = true
               this.onAdd(res)
             },
             fail: e => {

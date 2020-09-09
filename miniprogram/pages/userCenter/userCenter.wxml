@@ -40,7 +40,7 @@
         </view>
     </view>
     <view class="flex" hover-class="none" hover-stop-propagation="false">
-        <view class="btn btn_down" hover-class="none" hover-stop-propagation="false" bind:tap="getAllUrls">
+        <view class="btn btn_down"  bind:tap="getAllUrls" wx:if='{{dataList.length > 0}}'>
             <image class="" src="../../images/download.png" mode="widthFix"></image>
             <text class="" selectable="false" space="false" decode="false">下载图片</text>
         </view>

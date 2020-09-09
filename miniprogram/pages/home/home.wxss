@@ -64,10 +64,13 @@ page{
     right: 34rpx;
     width: 160rpx;
 }
-.pix3 .picture5{
+.picture6{
     position: absolute;
-    top: 530rpx;
-    right: 34rpx;
-    width: 180rpx;
+    top: 70rpx;
+    right: 100rpx;
+    width: 200rpx;
+}
+.pix3 .picture6{
+   top: 180rpx;
 }
 

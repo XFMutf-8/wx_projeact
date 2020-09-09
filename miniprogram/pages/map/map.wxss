@@ -105,3 +105,12 @@ page{
 .pix3 .picture9{
     top: 572rpx;  
 }
+.picture10{
+    position: absolute;
+    left: 320rpx;
+    top: 580rpx;
+    width: 150rpx;
+}
+.pix3 .picture10{
+    top: 677rpx;  
+}

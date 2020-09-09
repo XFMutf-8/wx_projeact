@@ -10,4 +10,5 @@
   <image id="g" class="picture7" src="{{spotImageUrl['海子石']}}" mode="widthFix"  bind:tap="goDetail"/>
   <image id="h" class="picture8" src="{{spotImageUrl['雷洁琼']}}" mode="widthFix" bind:tap="goDetail" />
   <image id="i" class="picture9" src="{{spotImageUrl['彭真']}}" mode="widthFix"  bind:tap="goDetail"/>
+  <image id="y" class="picture10" src="{{spotImageUrl['法治广场']}}" mode="widthFix"  bind:tap="goDetail"/>
 	</view>

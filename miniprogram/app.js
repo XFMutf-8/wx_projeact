@@ -1,7 +1,8 @@
 //app.js
 App({
   globalData: {
-    pixelRatio : 3
+    pixelRatio : 3,
+    curMapList : [false,false]
   },
   onLaunch: function () {
     wx.getSystemInfo({

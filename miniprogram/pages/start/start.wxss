@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E7%BB%84%20145.png?sign=771a55f37699fa206f21769945347511&t=1599184495');
     background-size: contain;
-    line-height: 88rpx;
+    line-height: 90rpx;
     text-align: center;
     font-weight: 600;
     z-index: 100;
@@ -100,7 +100,7 @@
     position: absolute;
     width: 120%;
     height: 120%;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-position: -10% -10%; */
 }
@@ -109,7 +109,7 @@
 
     background-size: 116% 100%;
     background-position:-150rpx -110rpx; 
-    animation: animate1 2.5s infinite;
+    animation: animate1 7s 1s infinite;
     top: -10%;
     left: -10%;
     z-index: 10;
@@ -120,7 +120,7 @@
     top: -10%;
     left: -10%;
     z-index: 9;
-    animation: animate2 2.5s infinite ease-out;
+    /* animation: animate2 5s infinite cubic-bezier(.25,.1,.3,1.5); */
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2.png?sign=e4ca481baa7cec44041c9cb8bfd95f78&t=1599144231');
 }
 
@@ -128,7 +128,7 @@
     top: -10%;
     left: -10%;
     z-index: 8;
-    animation: animate2 2.5s infinite ease-out;
+    animation: animate2 5s 2s infinite cubic-bezier(.25,.1,.3,1.5);
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3.png?sign=20c6a9f1e24ed14de2bb37cae93de72a&t=1599144399');
 }
 
@@ -136,7 +136,7 @@
     top: -10%;
     left: -10%;
     z-index: 7;
-    animation: animate3 2.5s infinite ease-out;
+    animation: animate3 5s infinite cubic-bezier(.25,.1,.3,1.5);
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4.png?sign=732f1cf1d8fcd3e6d622276f9d8e5f63&t=1599144453');
 }
 

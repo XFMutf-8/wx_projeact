@@ -17,7 +17,7 @@ var json = [
   {
     "name": "fatingkexuebowuguan",
     "realName": "法庭科学博物馆",
-    "headImg": '',
+    "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E5%BA%AD%E7%A7%91%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A6%86.png?sign=998223f97d4080fd20f3fc3968b1e74d&t=1599553391',
     "imgUrl": [
       "https://qny.shabula.com/img/fatingkexuebowuguan0.jpg",
       "https://qny.shabula.com/img/fatingkexuebowuguan1.jpg"
@@ -33,7 +33,7 @@ var json = [
   {
     "name": "fazhiguangchang",
     "realName": "法制广场",
-    "headImg": '',
+    "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA.png?sign=c6a8c4a5e2c3356715e565cd05336fbb&t=1599553416',
     "imgUrl": [
       "https://qny.shabula.com/img/fazhiguangchang0.jpg",
       "https://qny.shabula.com/img/fazhiguangchang1.jpg"
