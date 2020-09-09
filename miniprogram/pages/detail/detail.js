@@ -125,6 +125,16 @@ Page({
         mainInfo: jsonData.dataList[10]
       })
     }
+    else if(current == 'o'){ //法制广场
+      this.setData({
+        mainInfo: jsonData.dataList[2]
+      })
+    }
+    else if(current == 'p'){ //法庭科学博物馆
+      this.setData({
+        mainInfo: jsonData.dataList[1]
+      })
+    }
   },
   changeNormalPlay() {
     this.setData({
