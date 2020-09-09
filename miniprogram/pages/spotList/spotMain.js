@@ -1,35 +1,5 @@
 var spotJson = [
     {
-        id : 'haidian',
-        dataList : [
-            {
-                id: 'j',
-                name: '1-3号楼',
-                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/123%E5%8F%B7%E6%A5%BC.png?sign=048bf76402f9622e789a5ff91d6ec4e5&t=1599448537'
-            },
-            {
-                id: 'k',
-                name: '湖心亭',
-                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B9%96%E5%BF%83%E4%BA%AD.png?sign=a459a300e169387329b05da40d290534&t=1599448609'
-            },
-            {
-                id: 'l',
-                name: '扬帆雕塑',
-                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%89%AC%E5%B8%86%E9%9B%95%E5%A1%91.png?sign=0c3afd473ce38c4db1c0858b19723355&t=1599448577'
-            },
-            {
-                id: 'm',
-                name: '法治天下碑',
-                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%A4%A9%E4%B8%8B%E7%A2%91.png?sign=2f10f0e927c6ed6c7aefb14080be4e2c&t=1599448528'
-            },
-            {
-                id: 'n',
-                name: '钱端升纪念馆',
-                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E9%92%B1%E7%AB%AF%E5%8D%87%E7%BA%AA%E5%BF%B5%E9%A6%86.png?sign=5cb9790725afd4c1f812648c772a76bd&t=1599452255'
-            }
-        ]
-    },
-    {
         id : 'changping',
         dataList : [
             {
@@ -76,9 +46,49 @@ var spotJson = [
                 id: 'i',
                 name: '彭真雕像',
                 imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E5%BD%AD%E7%9C%9F%E9%9B%95%E5%83%8F.png?sign=b79ff8fcbcae02d91f0a5548bf1b1a95&t=1599448485'
+            },
+            {
+                id: 'o',
+                name: '法制广场',
+                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA.png?sign=e33fd9fc225f0f6b171f42287a22d090&t=1599475340'
             }
         ]
     },
+    {
+        id : 'haidian',
+        dataList : [
+            {
+                id: 'j',
+                name: '1-3号楼',
+                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/123%E5%8F%B7%E6%A5%BC.png?sign=048bf76402f9622e789a5ff91d6ec4e5&t=1599448537'
+            },
+            {
+                id: 'k',
+                name: '湖心亭',
+                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B9%96%E5%BF%83%E4%BA%AD.png?sign=a459a300e169387329b05da40d290534&t=1599448609'
+            },
+            {
+                id: 'l',
+                name: '扬帆雕塑',
+                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%89%AC%E5%B8%86%E9%9B%95%E5%A1%91.png?sign=0c3afd473ce38c4db1c0858b19723355&t=1599448577'
+            },
+            {
+                id: 'm',
+                name: '法治天下碑',
+                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%A4%A9%E4%B8%8B%E7%A2%91.png?sign=2f10f0e927c6ed6c7aefb14080be4e2c&t=1599448528'
+            },
+            {
+                id: 'n',
+                name: '钱端升纪念馆',
+                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E9%92%B1%E7%AB%AF%E5%8D%87%E7%BA%AA%E5%BF%B5%E9%A6%86.png?sign=5cb9790725afd4c1f812648c772a76bd&t=1599452255'
+            },
+            {
+                id: 'p',
+                name: '法庭科学博物馆',
+                imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E5%BA%AD%E7%A7%91%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A6%86.png?sign=50798e00bc89a0afe15e0ccc7a624803&t=1599475362'
+            }
+        ]
+    }
    
 ]
 

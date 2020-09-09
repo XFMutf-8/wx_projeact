@@ -131,7 +131,20 @@ Page({
         mainInfo: jsonData.dataList[2]
       })
     }
+<<<<<<< HEAD
 
+=======
+    else if(current == 'o'){ //法制广场
+      this.setData({
+        mainInfo: jsonData.dataList[2]
+      })
+    }
+    else if(current == 'p'){ //法庭科学博物馆
+      this.setData({
+        mainInfo: jsonData.dataList[1]
+      })
+    }
+>>>>>>> 3e2c7e579fccbc41ef08fe3466c9eaa9547749ee
   },
   changeNormalPlay() {
     this.setData({
