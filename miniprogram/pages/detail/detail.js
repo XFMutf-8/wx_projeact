@@ -27,8 +27,7 @@ Page({
     isShowSwap: false,
     isShowModal: false,
     message: ['不在地点范围内，打卡失败'],
-    mainInfo: [],
-    curStep : 0
+    mainInfo: []
   },
   onAdd: function (data) {
     const db = wx.cloud.database()
@@ -63,10 +62,6 @@ Page({
   onLoad: function (options) {
     // console.log(options.currentId) //json获取当前页面信息
     let current = options.currentId
-    let curArea = options.curArea || '1'
-    this.setData({
-      curArea 
-    })
     if (current == 'a') { //宝鼎
       this.setData({
         mainInfo: jsonData.dataList[12]
@@ -123,59 +118,35 @@ Page({
       this.setData({
         mainInfo: jsonData.dataList[10]
       })
-    } else if (current == 'x') { //法庭科学
-      this.setData({
-        mainInfo: jsonData.dataList[1]
-      })
-    }else if (current == 'y') { //法治广场
+    }
+    else if(current == 'o'){ //法制广场
       this.setData({
         mainInfo: jsonData.dataList[2]
       })
     }
-  },
-  startMove(){
-    this.timer = setInterval(() => {
-      if(this.data.curStep >= 553){
-        clearInterval(this.timer)
-        this.setData({
-          curStep : 0
-        })
-        this.startMove()
-      }
+    else if(current == 'p'){ //法庭科学博物馆
       this.setData({
-        curStep : this.data.curStep + 5
+        mainInfo: jsonData.dataList[1]
       })
-    }, 50);
-
-  },
-  pauseMove(){
-    clearInterval(this.timer)
-  },
-  showSwap() {
-    this.setData({
-      isShowSwap: !this.data.isShowSwap
-    })
+    }
   },
   changeNormalPlay() {
     this.setData({
       normalPlay: !this.data.normalPlay,
       schoolPlay: false
     })
-    this.pauseMove()
-    if(this.data.normalPlay){
-      this.startMove()
-    }
 
+  },
+  showSwap() {
+    this.setData({
+      isShowSwap: !this.data.isShowSwap
+    })
   },
   changeSchoolPlay() {
     this.setData({
       normalPlay: false,
       schoolPlay: !this.data.schoolPlay
     })
-    this.pauseMove()
-    if(this.data.schoolPlay){
-      this.startMove()
-    }
 
   },
   goRoutePlan() {
@@ -250,7 +221,6 @@ Page({
               this.setData({
                 message: ['打卡成功']
               })
-              getApp.globalData.curMapList[this.data.curArea - 1] = true
               this.onAdd(res)
             },
             fail: e => {
