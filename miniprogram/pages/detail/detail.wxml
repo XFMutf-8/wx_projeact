@@ -17,8 +17,11 @@
         </scroll-view>
         <view class="sub_item">
             <view class="sub_title" hover-class="none" hover-stop-propagation="false">音频介绍</view>
-            <view class="sub_image" hover-class="none" hover-stop-propagation="false">
-                <image class="" src="../../images/1.png" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="sub_image">
+                <view class="inner" style="transform:translateX(-{{curStep + 'rpx'}})">
+                    <image class="" src="../../images/1.png" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+                    <image class="" src="../../images/1.png" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+                </view>
             </view>
             <view class="btns" hover-class="none" hover-stop-propagation="false">
                 <view class="{{normalPlay?'btn' : 'btn active'}}" hover-class="none" hover-stop-propagation="false" bind:tap="changeNormalPlay">
@@ -37,7 +40,7 @@
             <view class="sub_title" hover-class="none" hover-stop-propagation="false">文字介绍</view>
             <view class="sub_content" hover-class="none" hover-stop-propagation="false">
                 <view class="text" wx:for="{{mainInfo.txt}}">
-                    <text class=""  decode="true">&nbsp;&nbsp;&nbsp;{{item}}</text>
+                    <text class="" decode="true">&nbsp;&nbsp;&nbsp;{{item}}</text>
                 </view>
                 <!-- <view class="text" >{{mainInfo.txt}}</view> -->
             </view>

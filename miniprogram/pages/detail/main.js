@@ -17,11 +17,7 @@ var json = [
   {
     "name": "fatingkexuebowuguan",
     "realName": "法庭科学博物馆",
-<<<<<<< HEAD
-    "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E5%BA%AD%E7%A7%91%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A6%86.png?sign=998223f97d4080fd20f3fc3968b1e74d&t=1599553391',
-=======
     "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E5%BA%AD%E7%A7%91%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A6%86.png?sign=50798e00bc89a0afe15e0ccc7a624803&t=1599475362',
->>>>>>> 3e2c7e579fccbc41ef08fe3466c9eaa9547749ee
     "imgUrl": [
       "https://qny.shabula.com/img/fatingkexuebowuguan0.jpg",
       "https://qny.shabula.com/img/fatingkexuebowuguan1.jpg"
@@ -37,11 +33,7 @@ var json = [
   {
     "name": "fazhiguangchang",
     "realName": "法制广场",
-<<<<<<< HEAD
-    "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA.png?sign=c6a8c4a5e2c3356715e565cd05336fbb&t=1599553416',
-=======
     "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA.png?sign=0c8b1e3055cce4ecf07de836ef78e65e&t=1599475526',
->>>>>>> 3e2c7e579fccbc41ef08fe3466c9eaa9547749ee
     "imgUrl": [
       "https://qny.shabula.com/img/fazhiguangchang0.jpg",
       "https://qny.shabula.com/img/fazhiguangchang1.jpg"

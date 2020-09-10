@@ -60,12 +60,12 @@ page{
 }
 .picture5{
     position: absolute;
-    top: 240rpx;
+    bottom: 660rpx;
     left: 380rpx;
     width: 130rpx;
 }
 .pix3 .picture5{
-    top: 354rpx;  
+    bottom: 760rpx;  
 }
 .picture6{
     position: absolute;
@@ -99,18 +99,18 @@ page{
 .picture9{
     position: absolute;
     left: 161rpx;
-    top: 453rpx;
+    bottom: 470rpx;
     width: 130rpx;
 }
 .pix3 .picture9{
-    top: 572rpx;  
+    bottom: 572rpx;  
 }
 .picture10{
     position: absolute;
     left: 320rpx;
-    top: 580rpx;
+    bottom: 430rpx;
     width: 150rpx;
 }
 .pix3 .picture10{
-    top: 677rpx;  
+    bottom: 530rpx; 
 }

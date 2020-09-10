@@ -27,7 +27,8 @@ Page({
     isShowSwap: false,
     isShowModal: false,
     message: ['不在地点范围内，打卡失败'],
-    mainInfo: []
+    mainInfo: [],
+    curStep : 0
   },
   onAdd: function (data) {
     const db = wx.cloud.database()
@@ -131,38 +132,50 @@ Page({
         mainInfo: jsonData.dataList[2]
       })
     }
-<<<<<<< HEAD
-
-=======
-    else if(current == 'o'){ //法制广场
-      this.setData({
-        mainInfo: jsonData.dataList[2]
-      })
-    }
-    else if(current == 'p'){ //法庭科学博物馆
-      this.setData({
-        mainInfo: jsonData.dataList[1]
-      })
-    }
->>>>>>> 3e2c7e579fccbc41ef08fe3466c9eaa9547749ee
   },
-  changeNormalPlay() {
-    this.setData({
-      normalPlay: !this.data.normalPlay,
-      schoolPlay: false
-    })
+  startMove(){
+    this.timer = setInterval(() => {
+      if(this.data.curStep >= 553){
+        clearInterval(this.timer)
+        this.setData({
+          curStep : 0
+        })
+        this.startMove()
+      }
+      this.setData({
+        curStep : this.data.curStep + 5
+      })
+    }, 50);
 
+  },
+  pauseMove(){
+    clearInterval(this.timer)
   },
   showSwap() {
     this.setData({
       isShowSwap: !this.data.isShowSwap
     })
   },
+  changeNormalPlay() {
+    this.setData({
+      normalPlay: !this.data.normalPlay,
+      schoolPlay: false
+    })
+    this.pauseMove()
+    if(this.data.normalPlay){
+      this.startMove()
+    }
+
+  },
   changeSchoolPlay() {
     this.setData({
       normalPlay: false,
       schoolPlay: !this.data.schoolPlay
     })
+    this.pauseMove()
+    if(this.data.schoolPlay){
+      this.startMove()
+    }
 
   },
   goRoutePlan() {
