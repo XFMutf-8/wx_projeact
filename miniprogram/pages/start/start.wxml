@@ -10,5 +10,5 @@
        进入 
     </view>
     <image src="../../images/name.png" mode="widthFix" class="name"></image>
-    <text>加载中...</text>
+    <!-- <text>加载中...</text> -->
 </view>

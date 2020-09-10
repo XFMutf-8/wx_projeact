@@ -119,12 +119,12 @@ Page({
         mainInfo: jsonData.dataList[10]
       })
     }
-    else if(current == 'o'){ //法制广场
+    else if(current == 'y'){ //法制广场
       this.setData({
         mainInfo: jsonData.dataList[2]
       })
     }
-    else if(current == 'p'){ //法庭科学博物馆
+    else if(current == 'x'){ //法庭科学博物馆
       this.setData({
         mainInfo: jsonData.dataList[1]
       })
@@ -135,7 +135,6 @@ Page({
       normalPlay: !this.data.normalPlay,
       schoolPlay: false
     })
-
   },
   showSwap() {
     this.setData({
@@ -147,7 +146,6 @@ Page({
       normalPlay: false,
       schoolPlay: !this.data.schoolPlay
     })
-
   },
   goRoutePlan() {
     let plugin = requirePlugin('routePlan');
@@ -172,7 +170,6 @@ Page({
     this.setData({
       isShowModal: !this.data.isShowModal
     })
-
   },
   startCamera() {
     wx.chooseImage({
