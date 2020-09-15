@@ -49,7 +49,7 @@ var spotJson = [
             },
             {
                 id: 'x',
-                name: '法制广场',
+                name: '法治广场',
                 imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA.png?sign=e33fd9fc225f0f6b171f42287a22d090&t=1599475340'
             }
         ]
@@ -59,7 +59,7 @@ var spotJson = [
         dataList : [
             {
                 id: 'j',
-                name: '1-3号楼',
+                name: '1、2、3号楼',
                 imageUrl:'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/123%E5%8F%B7%E6%A5%BC.png?sign=048bf76402f9622e789a5ff91d6ec4e5&t=1599448537'
             },
             {

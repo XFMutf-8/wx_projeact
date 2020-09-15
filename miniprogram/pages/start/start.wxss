@@ -104,6 +104,60 @@
     background-repeat: no-repeat;
     /* background-position: -10% -10%; */
 }
+.cloud1{
+    position: absolute;
+    width: 300rpx;
+    height: 130rpx;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 3%;
+    -webkit-animation-name: an1; 
+    -webkit-animation-duration: 30s; /*动画持续时间*/
+    -webkit-animation-iteration-count: infinite; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
+@keyframes an1
+{
+    0%{
+        right: -500rpx;
+    }
+    100%{
+        right: 1000rpx;
+    }
+}
+@keyframes an2
+{
+    0%{
+        left: -300rpx;
+    }
+    100%{
+        left: 1000rpx;
+    }
+}
+.cloud2{
+    position: absolute;
+    width: 500rpx;
+    height: 200rpx;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 30%;
+    -webkit-animation-name: an1; 
+    -webkit-animation-duration: 15s; /*动画持续时间*/
+    -webkit-animation-iteration-count: infinite; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.cloud3{
+    position: absolute;
+    width: 300rpx;
+    height: 130rpx;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 60%;
+    -webkit-animation-name: an2; 
+    -webkit-animation-duration: 25s; /*动画持续时间*/
+    -webkit-animation-iteration-count: infinite; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
 
 .bg1 {
 
@@ -121,7 +175,8 @@
     left: -10%;
     z-index: 9;
     /* animation: animate2 5s infinite cubic-bezier(.25,.1,.3,1.5); */
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2.png?sign=e4ca481baa7cec44041c9cb8bfd95f78&t=1599144231');
+    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2.png?sign=e4ca481baa7cec44041c9cb8bfd95f78&t=1599144231'); */
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2s.png?sign=8de473b6e4c184f6d69bca4b9dff3b8e&t=1600155188');
 }
 
 .bg3 {
@@ -129,7 +184,8 @@
     left: -10%;
     z-index: 8;
     animation: animate2 5s 2s infinite cubic-bezier(.25,.1,.3,1.5);
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3.png?sign=20c6a9f1e24ed14de2bb37cae93de72a&t=1599144399');
+    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3.png?sign=20c6a9f1e24ed14de2bb37cae93de72a&t=1599144399'); */
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3s.png?sign=cfe029e4258c07ae9d29d7accb19a8a7&t=1600154903');
 }
 
 .bg4 {
@@ -137,7 +193,8 @@
     left: -10%;
     z-index: 7;
     animation: animate3 5s infinite cubic-bezier(.25,.1,.3,1.5);
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4.png?sign=732f1cf1d8fcd3e6d622276f9d8e5f63&t=1599144453');
+    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4.png?sign=732f1cf1d8fcd3e6d622276f9d8e5f63&t=1599144453'); */
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4s.png?sign=26283a8bc47fdb7cc8407424b580762d&t=1600155305');
 }
 
 .bg5 {
@@ -151,6 +208,22 @@
     height: 50%;
     bottom: -10%;
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L6.png?sign=368af8d23778b82576871fb89a20854f&t=1599144680');
+}
+.cloud1 {
+    z-index: 20;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%911.png?sign=0d45d576fa46a86c3c6d3c5f5b29c170&t=1600155600');
+}
+.cloud2 {
+    z-index: 20;
+    /* height: 50%; */
+    /* bottom: -10%; */
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%912.png?sign=5a3876f6128143e87d2141f78788246e&t=1600155670');
+}
+.cloud3 {
+    z-index: 20;
+    /* height: 50%; */
+    /* bottom: -10%; */
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%913.png?sign=b27772dd9654c0fb4444d24f75a0a8ce&t=1600155689');
 }
 .home .bg2,.home .bg3,.home .bg4{
     animation: fade 1.5s;

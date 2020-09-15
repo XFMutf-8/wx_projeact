@@ -15,7 +15,7 @@
             </view>
         </scroll-view> -->
         <view class="scroll_view">
-            <view class="item" hover-class="none" hover-stop-propagation="false" wx:for="{{mainInfo.imgUrl}}">
+            <view class="item" hover-class="none" hover-stop-propagation="false" wx:for="{{mainInfo.imgUrl}}" bind:tap="showSwap">
                 <image class="" src="{{item}}" mode="heightFix" lazy-load="false"></image>
             </view> 
         </view>
@@ -33,11 +33,11 @@
                     <image class="" src="../../images/play.png" mode="widthFix" wx:else></image>
                     <text class="">普通版</text>
                 </view>
-                <view class="{{schoolPlay?'btn' : 'btn active'}}" hover-class="none" hover-stop-propagation="false" bind:tap="changeSchoolPlay">
+                <!-- <view class="{{schoolPlay?'btn' : 'btn active'}}" hover-class="none" hover-stop-propagation="false" bind:tap="changeSchoolPlay">
                     <image class="" src="../../images/pause.png" mode="widthFix" wx:if="{{!schoolPlay}}"></image>
                     <image class="" src="../../images/play.png" mode="widthFix" wx:else></image>
                     <text class="">校友版</text>
-                </view>
+                </view> -->
             </view>
         </view>
         <view class="sub_item" hover-class="none" hover-stop-propagation="false">

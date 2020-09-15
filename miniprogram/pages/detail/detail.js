@@ -119,7 +119,7 @@ Page({
         mainInfo: jsonData.dataList[10]
       })
     }
-    else if(current == 'y'){ //法制广场
+    else if(current == 'y'){ //法治广场
       this.setData({
         mainInfo: jsonData.dataList[2]
       })

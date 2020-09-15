@@ -15,6 +15,19 @@ var json = [
     "lat": "40.227538"
   },
   {
+    "name": "fazhiguangchang",
+    "realName": "法治广场",
+    "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA.png?sign=0c8b1e3055cce4ecf07de836ef78e65e&t=1599475526',
+    "imgUrl": [
+      "https://qny.shabula.com/img/fazhiguangchang0.jpg",
+      "https://qny.shabula.com/img/fazhiguangchang1.jpg"
+    ],
+    "txt": [
+      "法治广场于2007年10月落成，位于昌平校区法渊阁东侧。其主体建筑为两面主题墙，一面以《苏格拉底之死》为主题，再现了苏格拉底服刑前与弟子告别的场面。苏格拉底之死向后世昭示，法治首先是程序之治，法治的前提是法的善良，法治必定是良法之治和善法之治。另一面墙以《世界人权宣言》全文为主题，该宣言于1948年12月10日在第三届联合国大会通过，是国际社会第一次就人权和基本自由作出的世界性宣言，是国际人权宪章体系的第一个文件。1950年，联合国大会将每年的12月10日定为“世界人权日”。"  
+    ],  
+    "videoUrl": ""
+  },
+  {
     "name": "fatingkexuebowuguan",
     "realName": "法庭科学博物馆",
     "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E5%BA%AD%E7%A7%91%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A6%86.png?sign=50798e00bc89a0afe15e0ccc7a624803&t=1599475362',
@@ -30,21 +43,8 @@ var json = [
     "lat": "40.046545"
   },
   {
-    "name": "fazhiguangchang",
-    "realName": "法制广场",
-    "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA.png?sign=0c8b1e3055cce4ecf07de836ef78e65e&t=1599475526',
-    "imgUrl": [
-      "https://qny.shabula.com/img/fazhiguangchang0.jpg",
-      "https://qny.shabula.com/img/fazhiguangchang1.jpg"
-    ],
-    "txt": [
-      "法治广场于2007年10月落成，位于昌平校区法渊阁东侧。其主体建筑为两面主题墙，一面以《苏格拉底之死》为主题，再现了苏格拉底服刑前与弟子告别的场面。苏格拉底之死向后世昭示，法治首先是程序之治，法治的前提是法的善良，法治必定是良法之治和善法之治。另一面墙以《世界人权宣言》全文为主题，该宣言于1948年12月10日在第三届联合国大会通过，是国际社会第一次就人权和基本自由作出的世界性宣言，是国际人权宪章体系的第一个文件。1950年，联合国大会将每年的12月10日定为“世界人权日”。"  
-    ],  
-    "videoUrl": ""
-  },
-  {
     "name": "fazhitianxiabei",
-    "realName": "法制天下碑",
+    "realName": "法治天下碑",
     "headImg": "https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%B3%95%E6%B2%BB%E5%A4%A9%E4%B8%8B%E7%A2%91.png?sign=2f10f0e927c6ed6c7aefb14080be4e2c&t=1599448528",
     "imgUrl": [
       "https://qny.shabula.com/img/fazhitianxiabei0.jpg",
@@ -59,7 +59,7 @@ var json = [
   },
   {
     "name": "floor",
-    "realName": "宿舍1-3号楼",
+    "realName": "1、2、3号楼",
     "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/123%E5%8F%B7%E6%A5%BC.png?sign=6edc559caf8773812eded3e8a34d5dcc&t=1599473153',
     "imgUrl": [
       "https://qny.shabula.com/img/floor.jpg",
@@ -182,7 +182,7 @@ var json = [
   },
   {
     "name": "xiaoxunbaoding",
-    "realName": "校训宝鼎（法鼎）",
+    "realName": "校训宝鼎",
     "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/spotImg/%E6%A0%A1%E8%AE%AD%E5%AE%9D%E9%BC%8E.png?sign=dbaafa662831cc4f609e2c74e5b2ca0e&t=1599473629',
     "imgUrl": [
       "https://qny.shabula.com/img/xiaoxunbaoding0.jpg",
