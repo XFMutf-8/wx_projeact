@@ -44,16 +44,19 @@
   margin-bottom: 60rpx;
 }
 .scroll_view {
-  white-space: nowrap;
-  padding: 0 20rpx;
+  /* white-space: nowrap; */
+  /* padding: 0 20rpx; */
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .scroll_view .item {
   height: 412rpx;
   border: 3rpx solid #fff;
   border-radius: 26rpx;
   display: inline-block;
-  margin-right: 40rpx;
+  /* margin-right: 40rpx; */
   overflow: hidden;
 }
 .scroll_view .item image {

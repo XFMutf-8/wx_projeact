@@ -6,9 +6,12 @@
     <view class="bg4" hover-class="none" hover-stop-propagation="false"></view>
     <view class="bg5" hover-class="none" hover-stop-propagation="false"></view>
     <view class="bg6" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="cloud1" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="cloud2" hover-class="none" hover-stop-propagation="false"></view>
+    <view class="cloud3" hover-class="none" hover-stop-propagation="false"></view>
     <view class="btn" bindtap="goHome">
        进入 
     </view>
     <image src="../../images/name.png" mode="widthFix" class="name"></image>
-    <text>加载中...</text>
+    <!-- <text>加载中...</text> -->
 </view>

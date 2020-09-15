@@ -9,12 +9,16 @@
         <view class="title" hover-class="none" hover-stop-propagation="false">
             {{mainInfo.realName}}
         </view>
-        <scroll-view class="scroll_view" scroll-x="true" scroll-y="false" bind:tap="showSwap">
+        <!-- <scroll-view class="scroll_view" scroll-x="true" scroll-y="false" bind:tap="showSwap">
             <view class="item" hover-class="none" hover-stop-propagation="false" wx:for="{{mainInfo.imgUrl}}">
-                <!-- <image class="" src="https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E5%9B%BE%E7%89%872.png?sign=d39519f845f829daa6efeb343869f25f&t=1597649915" mode="widthFix" lazy-load="false"></image> -->
                 <image class="" src="{{item}}" mode="heightFix" lazy-load="false"></image>
             </view>
-        </scroll-view>
+        </scroll-view> -->
+        <view class="scroll_view">
+            <view class="item" hover-class="none" hover-stop-propagation="false" wx:for="{{mainInfo.imgUrl}}" bind:tap="showSwap">
+                <image class="" src="{{item}}" mode="heightFix" lazy-load="false"></image>
+            </view> 
+        </view>
         <view class="sub_item">
             <view class="sub_title" hover-class="none" hover-stop-propagation="false">音频介绍</view>
             <view class="sub_image">
@@ -29,11 +33,11 @@
                     <image class="" src="../../images/play.png" mode="widthFix" wx:else></image>
                     <text class="">普通版</text>
                 </view>
-                <view class="{{schoolPlay?'btn' : 'btn active'}}" hover-class="none" hover-stop-propagation="false" bind:tap="changeSchoolPlay">
+                <!-- <view class="{{schoolPlay?'btn' : 'btn active'}}" hover-class="none" hover-stop-propagation="false" bind:tap="changeSchoolPlay">
                     <image class="" src="../../images/pause.png" mode="widthFix" wx:if="{{!schoolPlay}}"></image>
                     <image class="" src="../../images/play.png" mode="widthFix" wx:else></image>
                     <text class="">校友版</text>
-                </view>
+                </view> -->
             </view>
         </view>
         <view class="sub_item" hover-class="none" hover-stop-propagation="false">
