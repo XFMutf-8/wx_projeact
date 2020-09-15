@@ -73,7 +73,7 @@
                 <image class="" src="../../images/cancel.png" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
                 <text class="" selectable="false" space="false" decode="false">取消</text>
             </view>
-            <view class="btn" bind:tap='getPosition'>
+            <view class="btn" bind:tap='uploadPicture'>
                 <image class="" src="../../images/right.png" mode="widthFix"></image>
                 <text class="" selectable="false" space="false" decode="false">打卡</text>
             </view>

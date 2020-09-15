@@ -49,12 +49,19 @@ Page({
     })
   },
   onQuery: function() {
+    wx.showLoading({
+      title: 'loading',
+      mask: true,
+    })
     const db = wx.cloud.database()
     // 查询当前用户所有的 counters
     db.collection('my_spot_image').where({
       _openid: this.data.openid
     }).get({
       success: res => {
+        wx.hideLoading({
+          success: (res) => {},
+        })
         this.setData({
           queryResult: JSON.stringify(res.data, null, 2),
           dataList : res.data
@@ -65,6 +72,9 @@ Page({
         wx.showToast({
           icon: 'none',
           title: '查询记录失败'
+        })
+        wx.hideLoading({
+          success: (res) => {},
         })
         console.error('[数据库] [查询记录] 失败：', err)
       }

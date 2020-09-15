@@ -182,11 +182,6 @@ Page({
     let plugin = requirePlugin('routePlan');
     let key = 'GXYBZ-OOIRK-XBUJ3-AEUEK-APV7Z-5NFXS'; //使用在腾讯位置服务申请的key
     let referer = '文化景观'; //调用插件的小程序的名称
-    let startPoint = JSON.stringify({ //起点
-      'name': '中国技术交易大厦',
-      'latitude': 39.984154,
-      'longitude': 116.30749
-    });
     let endPoint = JSON.stringify({ //终点
       'name': this.data.mainInfo.realName,
       'latitude': this.data.mainInfo.lat,
@@ -204,6 +199,8 @@ Page({
 
   },
   startCamera() {
+    this.getPosition()
+    if(!this.data.isInArea) return
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],
@@ -233,46 +230,17 @@ Page({
         let lat = this.data.mainInfo.lat * 1000000
         let lon = this.data.mainInfo.lon * 1000000
         console.log(curLat,curLon,lon,lat,'111111')
-        if (curLat < lat + 10 && curLat > lat - 10 && curLon > lon - 10 && curLon < lon + 10) {
+        if (curLat < lat + 50 && curLat > lat - 50 && curLon > lon - 50 && curLon < lon + 50) {
           this.setData({
             latitude: res.latitude,
-            longitude: res.longitude
-          })
-          const filePath = this.data.tempFilePaths[0]
-          // 上传图片
-          const cloudPath = 'myImage/' + new Date().getTime() + filePath.match(/\.[^.]+?$/)[0]
-          wx.cloud.uploadFile({
-            cloudPath,
-            filePath,
-            success: res => {
-              console.log('[上传文件] 成功：', res)
-              this.selectComponent('#toast').showToast()
-              this.setData({
-                message: ['打卡成功']
-              })
-              getApp.globalData.curMapList[this.data.curArea - 1] = true
-              this.onAdd(res)
-            },
-            fail: e => {
-              console.error('[上传文件] 失败：', e)
-              this.selectComponent('#toast').showToast()
-              this.setData({
-                message: ['[上传文件] 失败']
-              })
-            },
-            complete: () => {
-              wx.hideLoading()
-            }
-          })
-          // this.selectComponent('#toast').showToast()
-          this.setData({
-            isShowModal: false
+            longitude: res.longitude,
+            isInArea : true
           })
         }else{
           this.selectComponent('#toast').showToast()
               this.setData({
                 message: ['不在打卡范围内'],
-                isShowModal : false
+                isInArea : false
               })
         }
        
@@ -280,6 +248,37 @@ Page({
       fail: (res) => {
         console.log(res);
       }
+    })
+  },
+  uploadPicture(){
+    const filePath = this.data.tempFilePaths[0]
+    // 上传图片
+    const cloudPath = 'myImage/' + new Date().getTime() + filePath.match(/\.[^.]+?$/)[0]
+    wx.cloud.uploadFile({
+      cloudPath,
+      filePath,
+      success: res => {
+        console.log('[上传文件] 成功：', res)
+        this.selectComponent('#toast').showToast()
+        this.setData({
+          message: ['打卡成功'],
+        })
+        getApp.globalData.curMapList[this.data.curArea - 1] = true
+        this.onAdd(res)
+      },
+      fail: e => {
+        console.error('[上传文件] 失败：', e)
+        this.selectComponent('#toast').showToast()
+        this.setData({
+          message: ['[上传文件] 失败'],
+        })
+      },
+      complete: () => {
+        wx.hideLoading()
+      }
+    })
+    this.setData({
+      isShowModal: false
     })
   },
 
