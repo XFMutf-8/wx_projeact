@@ -24,56 +24,56 @@ page{
 }
 .picture1{
     position: absolute;
-    top: 450rpx;
+    top: 510rpx;
     left: 93rpx;
     width: 190rpx;
 }
 .pix3 .picture1{
-    top: 555rpx;  
+    top: 615rpx;  
 }
 .picture2{
     position: absolute;
-    top: 620rpx;
+    top: 680rpx;
     left: 95rpx;
     width: 180rpx;
 }
 .pix3 .picture2{
-    top: 735rpx;  
+    top: 795rpx;  
 }
 .picture3{
     position: absolute;
-    top: 510rpx;
+    top: 570rpx;
     left: 322rpx;
     width: 160rpx;
 }
 .pix3 .picture3{
-    top: 615rpx;  
+    top: 675rpx;  
 }
 .picture4{
     position: absolute;
-    top: 778rpx;
+    top: 795rpx;
     right: 47rpx;
     width: 180rpx;
 }
 .pix3 .picture4{
-    top: 885rpx;
+    top: 945rpx;
 }
 .picture5{
     position: absolute;
-    top: 480rpx;
+    top: 560rpx;
     right: 34rpx;
     width: 160rpx;
 }
 .pix3 .picture5{
-    top: 610rpx;
+    top: 670rpx;
 }
 .picture6{
     position: absolute;
-    top: 130rpx;
+    top: 190rpx;
     right: 100rpx;
     width: 200rpx;
 }
 .pix3 .picture6{
-   top: 235rpx;
+   top: 295rpx;
 }
 

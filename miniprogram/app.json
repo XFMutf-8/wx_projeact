@@ -29,6 +29,7 @@
         "navigationStyle":"custom"
     },
     "tabBar": {
+        "custom": true,
         "list": [
             {
                 "pagePath": "pages/home/home",
@@ -53,6 +54,7 @@
         ]
     },
     "sitemapLocation": "sitemap.json",
+    "usingComponents": {},
     "style": "v2",
     "plugins": {
         "routePlan": {
