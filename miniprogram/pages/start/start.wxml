@@ -7,9 +7,9 @@
         <view class="bg4" hover-class="none" hover-stop-propagation="false"></view>
         <view class="bg5" hover-class="none" hover-stop-propagation="false"></view>
         <view class="bg6" hover-class="none" hover-stop-propagation="false"></view>
-        <view class="cloud1" hover-class="none" hover-stop-propagation="false"></view>
+        <!-- <view class="cloud1" hover-class="none" hover-stop-propagation="false"></view>
         <view class="cloud2" hover-class="none" hover-stop-propagation="false"></view>
-        <view class="cloud3" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="cloud3" hover-class="none" hover-stop-propagation="false"></view> -->
         <view class="btn" bindtap="goHome">进入</view>
     </block>
     <view wx:if="{{showTab}}" class="tab" hover-class="none" hover-stop-propagation="false">

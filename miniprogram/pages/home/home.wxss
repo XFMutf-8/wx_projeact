@@ -76,4 +76,69 @@ page{
 .pix3 .picture6{
    top: 295rpx;
 }
-
+.cloud1 {
+    z-index: 20;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%911.png?sign=0d45d576fa46a86c3c6d3c5f5b29c170&t=1600155600');
+}
+.cloud2 {
+    z-index: 20;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%912.png?sign=5a3876f6128143e87d2141f78788246e&t=1600155670');
+}
+.cloud3 {
+    z-index: 20;
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%913.png?sign=b27772dd9654c0fb4444d24f75a0a8ce&t=1600155689');
+}
+.cloud1{
+    position: absolute;
+    width: 200rpx;
+    height: 90rpx;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 3%;
+    -webkit-animation-name: an1; 
+    -webkit-animation-duration: 60s; /*动画持续时间*/
+    -webkit-animation-iteration-count: infinite; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.cloud2{
+    position: absolute;
+    width: 200rpx;
+    height: 60rpx;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 30%;
+    -webkit-animation-name: an1; 
+    -webkit-animation-duration: 60s; /*动画持续时间*/
+    -webkit-animation-iteration-count: infinite; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.cloud3{
+    position: absolute;
+    width: 200rpx;
+    height: 100rpx;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 60%;
+    -webkit-animation-name: an2; 
+    -webkit-animation-duration: 50s; /*动画持续时间*/
+    -webkit-animation-iteration-count: infinite; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
+@keyframes an1
+{
+    0%{
+        right: -200rpx;
+    }
+    100%{
+        right: 800rpx;
+    }
+}
+@keyframes an2
+{
+    0%{
+        left: -200rpx;
+    }
+    100%{
+        left: 800rpx;
+    }
+}
