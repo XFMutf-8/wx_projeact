@@ -132,6 +132,8 @@ Page({
         mainInfo: jsonData.dataList[2]
       })
     }
+    this.innerAudioContext = wx.createInnerAudioContext()
+    this.innerAudioContext.src = this.data.mainInfo.audioUrl
   },
   startMove(){
     this.timer = setInterval(() => {
@@ -164,6 +166,9 @@ Page({
     this.pauseMove()
     if(this.data.normalPlay){
       this.startMove()
+      this.innerAudioContext.play()
+    }else{
+      this.innerAudioContext.pause()
     }
 
   },
@@ -295,11 +300,22 @@ Page({
   onShow: function () {
 
   },
+  resetAudio(){
+    this.innerAudioContext.stop()
+    this.setData({
+      normalPlay : false,
+      schoolPlay : false
+    })
+    this.pauseMove()
+  },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+    console.log('---onhide')
+    this.resetAudio()
+    
 
   },
 
@@ -307,7 +323,8 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    console.log('---onunload')
+    this.resetAudio()
   },
 
   /**
