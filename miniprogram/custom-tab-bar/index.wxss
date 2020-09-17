@@ -1,0 +1,71 @@
+/* components/tabBar/tabBar.wxss */
+
+
+/*tabbar  */
+
+.tabBarWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  z-index: 99999999999999999;
+  opacity: .6;
+
+}
+
+.tabBarWrap::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  width: 100%;
+  height: 1rpx;
+  background: #979797;
+  transform: scaleY(.5);
+}
+
+.tabItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120rpx;
+  position: relative;
+  /* padding-top: 10rpx; */
+}
+.numIcon{
+  position: absolute;
+  right: 52rpx;
+  top: 14rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #FB4A4C;
+  height: 35rpx;
+  width: 35rpx;
+  border-radius: 50%;
+  line-height: 35rpx;
+}
+
+.imgWrap {
+  width: 90rpx;
+  height: 56rpx;
+  margin: 12rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widthFix{
+  width: 100%;
+}
+
+.text{
+  font-size: 24rpx;
+  color: #333;
+   margin-bottom: 6rpx;
+  display: block;
+}

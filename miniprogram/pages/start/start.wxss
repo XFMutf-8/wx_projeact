@@ -199,7 +199,7 @@
 
 .bg5 {
     z-index: 6;
-    height: 50%;
+    height: 40%;
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L5.png?sign=438d06d61935281307fe06236acc5dfc&t=1599144657');
 }
 

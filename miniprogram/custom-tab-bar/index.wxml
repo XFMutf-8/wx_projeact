@@ -1,0 +1,8 @@
+<!-- components/tabBar/tabBar.wxml -->
+<cover-view class='tabBarWrap'>
+    <cover-view wx:for="{{tabBar.list}}" wx:key="index" data-url='{{item.pagePath}}' data-index='{{index}}' class='tabItem' bind:tap="switchTab">
+      <cover-view class='imgWrap'>
+        <cover-image mode='widthFix' src='{{selected == index ? item.selectedIconPath : item.iconPath}}'></cover-image>
+      </cover-view>
+    </cover-view>
+</cover-view>

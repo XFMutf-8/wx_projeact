@@ -24,93 +24,93 @@ page{
 }
 .picture1{
     position: absolute;
-    bottom: 134rpx;
+    bottom: 174rpx;
     left: 80rpx;
     width: 220rpx;
 }
 .pix3 .picture1{
-    bottom: 200rpx;  
+    bottom: 240rpx;  
 }
 .picture2{
     position: absolute;
-    bottom: 100rpx;
+    bottom: 140rpx;
     right: 215rpx;
     width: 180rpx;
 }
 .pix3 .picture2{
-    bottom: 170rpx;  
+    bottom: 210rpx;  
 }
 .picture3{
     position: absolute;
-    bottom: 222rpx;
+    bottom: 262rpx;
     left: 208rpx;
     width: 150rpx;
 }
 .pix3 .picture3{
-    bottom: 275rpx;  
+    bottom: 315rpx;  
 }
 .picture4{
     position: absolute;
-    bottom: 377rpx;
+    bottom: 417rpx;
     right: 164rpx;
     width: 170rpx;
 }
 .pix3 .picture4{
-    bottom: 450rpx;  
+    bottom: 490rpx;  
 }
 .picture5{
     position: absolute;
-    bottom: 720rpx;
+    bottom: 760rpx;
     left: 380rpx;
     width: 130rpx;
 }
 .pix3 .picture5{
-    bottom: 870rpx;  
+    bottom: 920rpx;  
 }
 .picture6{
     position: absolute;
-    bottom: 278rpx;
+    bottom: 318rpx;
     left: 316rpx;
     width: 140rpx;
 }
 .pix3 .picture6{
-    bottom: 357rpx;  
+    bottom: 395rpx;  
 }
 
 .picture7{
     position: absolute;
-    bottom: 192rpx;
+    bottom: 232rpx;
     right: 79rpx;
     width: 150rpx;
 }
 .pix3 .picture7{
-    bottom: 260rpx;  
+    bottom: 300rpx;  
 }
 
 .picture8{
     position: absolute;
     left: 100rpx;
-    bottom: 379rpx;
+    bottom: 420rpx;
     width: 150rpx;
 }
 .pix3 .picture8{
-    bottom: 446rpx;  
+    bottom: 486rpx;  
 }
 .picture9{
     position: absolute;
     left: 161rpx;
-    bottom: 530rpx;
+    bottom: 570rpx;
     width: 130rpx;
 }
 .pix3 .picture9{
-    bottom: 602rpx;  
+    bottom: 642rpx;  
 }
 .picture10{
     position: absolute;
     left: 320rpx;
-    bottom: 490rpx;
+    bottom: 530rpx;
     width: 150rpx;
 }
 .pix3 .picture10{
-    bottom: 560rpx; 
+    bottom: 600rpx; 
 }
