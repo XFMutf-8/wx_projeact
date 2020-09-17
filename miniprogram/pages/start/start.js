@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    showTab : false
   },
   goHome(){
     this.setData({
@@ -13,10 +13,23 @@ Page({
     })
     let time = setTimeout(() => {
       clearTimeout(time)
-      wx.switchTab({
-        url: '/pages/home/home',
+      // wx.switchTab({
+      //   url: '/pages/home/home',
+      // })
+      this.setData({
+        showTab : true
       })
     },1500)
+  },
+  goIndex(){
+    wx.switchTab({
+        url: '/pages/home/home',
+      })
+  },
+  goMap(){
+    wx.switchTab({
+      url: '/pages/map/map',
+    })
   },
 
   /**

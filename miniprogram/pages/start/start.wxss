@@ -30,19 +30,25 @@
     }
 }
 @keyframes toTop{
-    from{
+    0%{
         top: -10%;
     }
-    to{
+    75%{
         top: -20%;
+    }
+    100% {
+        opacity: 0;
     }
 }
 @keyframes toBottom{
-    from{
+    0%{
         bottom: -10%;
     }
-    to{
+    75%{
         bottom: -20%;
+    }
+    100%{
+        opacity: 0;
     }
 }
 @keyframes animate1{
@@ -229,10 +235,10 @@
     animation: fade 1.5s;
 }
 .home .bg5{
-    animation: toTop 1.5s;  
+    animation: toTop 2s;  
 }
 .home .bg6{
-    animation: toBottom 1.5s;  
+    animation: toBottom 2s;  
 }
 .home .name{
     position: absolute;
@@ -253,4 +259,26 @@
     z-index: 100;
     font-size: 38rpx;
     color: #ea9b8b;
+}
+.school_name{
+    position: absolute;
+    bottom: 120rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100000;
+    width: 200rpx;
+}
+.tab{
+    position: absolute;
+    bottom: 420rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100000;
+    width: 500rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.tab image{
+    width: 45%;
+
 }

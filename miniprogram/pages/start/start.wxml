@@ -1,17 +1,22 @@
 <!-- pages/start/start.wxml -->
 <view class="{{isGoHome?'mianBg home' : 'mianBg'}}" hover-class="none" hover-stop-propagation="false">
-    <view class="bg1" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="bg2" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="bg3" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="bg4" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="bg5" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="bg6" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="cloud1" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="cloud2" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="cloud3" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="btn" bindtap="goHome">
-       进入 
+    <block wx:if="{{!showTab}}">
+        <view class="bg1" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="bg2" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="bg3" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="bg4" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="bg5" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="bg6" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="cloud1" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="cloud2" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="cloud3" hover-class="none" hover-stop-propagation="false"></view>
+        <view class="btn" bindtap="goHome">进入</view>
+    </block>
+    <view wx:if="{{showTab}}" class="tab" hover-class="none" hover-stop-propagation="false">
+        <image class="tab1" src="../../images/haidian.png" bind:tap="goIndex" mode="widthFix"></image>
+        <image class="tab2" src="../../images/changping.png" bind:tap="goMap" mode="widthFix"></image>
     </view>
     <image src="../../images/name.png" mode="widthFix" class="name"></image>
+    <image class="" src="../../images/school_name.png" class='school_name' mode="widthFix"></image>
     <!-- <text>加载中...</text> -->
 </view>
