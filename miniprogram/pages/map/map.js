@@ -18,7 +18,6 @@ Page({
       '法治广场' : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA1.png?sign=041aab6de8baf92d8bbba6c8eda755db&t=1599552591'
     },
     pixelRatio : 3
-
   },
 
   /**
