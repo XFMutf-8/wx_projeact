@@ -1,6 +1,6 @@
 <!--pages/map/map.wxml-->
 <image class='gold' src="../../images/gold.png"></image>
-	<view class="{{pixelRatio == '3'?'pix3 map' : 'map'}}" hover-class="none" hover-stop-propagation="false">
+<view class="{{pixelRatio == '3'?'pix3 map' : 'map'}}" hover-class="none" hover-stop-propagation="false">
   <image id="a" class="picture1" src="{{spotImageUrl['宝鼎']}}" mode="widthFix" bind:tap="goDetail"/>
   <image id="b" class="picture2" src="{{spotImageUrl['法镜']}}" mode="widthFix"  bind:tap="goDetail"/>
   <image id="c" class="picture3" src="{{spotImageUrl['铜像']}}" mode="widthFix"  bind:tap="goDetail"/>
@@ -11,4 +11,7 @@
   <image id="h" class="picture8" src="{{spotImageUrl['雷洁琼']}}" mode="widthFix" bind:tap="goDetail" />
   <image id="i" class="picture9" src="{{spotImageUrl['彭真']}}" mode="widthFix"  bind:tap="goDetail"/>
   <image id="x" class="picture10" src="{{spotImageUrl['法治广场']}}" mode="widthFix"  bind:tap="goDetail"/>
-	</view>
+</view>
+<view class="cloud1" hover-class="none" hover-stop-propagation="false"></view>
+<view class="cloud2" hover-class="none" hover-stop-propagation="false"></view>
+<view class="cloud3" hover-class="none" hover-stop-propagation="false"></view>

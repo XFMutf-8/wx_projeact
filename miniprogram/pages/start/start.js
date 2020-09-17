@@ -13,9 +13,9 @@ Page({
     })
     let time = setTimeout(() => {
       clearTimeout(time)
-      wx.switchTab({
-        url: '/pages/home/home',
-      })
+      // wx.switchTab({
+      //   url: '/pages/home/home',
+      // })
     },1500)
   },
 

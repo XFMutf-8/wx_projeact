@@ -175,8 +175,8 @@
     left: -10%;
     z-index: 9;
     /* animation: animate2 5s infinite cubic-bezier(.25,.1,.3,1.5); */
-    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2.png?sign=e4ca481baa7cec44041c9cb8bfd95f78&t=1599144231'); */
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2s.png?sign=8de473b6e4c184f6d69bca4b9dff3b8e&t=1600155188');
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2.png?sign=e4ca481baa7cec44041c9cb8bfd95f78&t=1599144231');
+    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L2s.png?sign=8de473b6e4c184f6d69bca4b9dff3b8e&t=1600155188'); */
 }
 
 .bg3 {
@@ -184,8 +184,8 @@
     left: -10%;
     z-index: 8;
     animation: animate2 5s 2s infinite cubic-bezier(.25,.1,.3,1.5);
-    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3.png?sign=20c6a9f1e24ed14de2bb37cae93de72a&t=1599144399'); */
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3s.png?sign=cfe029e4258c07ae9d29d7accb19a8a7&t=1600154903');
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3.png?sign=20c6a9f1e24ed14de2bb37cae93de72a&t=1599144399');
+    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L3s.png?sign=cfe029e4258c07ae9d29d7accb19a8a7&t=1600154903'); */
 }
 
 .bg4 {
@@ -193,8 +193,8 @@
     left: -10%;
     z-index: 7;
     animation: animate3 5s infinite cubic-bezier(.25,.1,.3,1.5);
-    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4.png?sign=732f1cf1d8fcd3e6d622276f9d8e5f63&t=1599144453'); */
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4s.png?sign=26283a8bc47fdb7cc8407424b580762d&t=1600155305');
+    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4.png?sign=732f1cf1d8fcd3e6d622276f9d8e5f63&t=1599144453');
+    /* background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/L4s.png?sign=26283a8bc47fdb7cc8407424b580762d&t=1600155305'); */
 }
 
 .bg5 {
@@ -215,14 +215,10 @@
 }
 .cloud2 {
     z-index: 20;
-    /* height: 50%; */
-    /* bottom: -10%; */
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%912.png?sign=5a3876f6128143e87d2141f78788246e&t=1600155670');
 }
 .cloud3 {
     z-index: 20;
-    /* height: 50%; */
-    /* bottom: -10%; */
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%913.png?sign=b27772dd9654c0fb4444d24f75a0a8ce&t=1600155689');
 }
 .home .bg2,.home .bg3,.home .bg4{
