@@ -7,16 +7,21 @@ App({
   onLaunch: function () {
     wx.getSystemInfo({
       success: (res) => {
-      console.log(res.model)
-      console.log(res.pixelRatio,'pix')
-      console.log(res.windowWidth)
-      console.log(res.windowHeight)
-      console.log(res.language)
-      console.log(res.version)
-      this.globalData.pixelRatio = res.pixelRatio
+        // console.log(res.model)
+        // console.log(res.pixelRatio,'pix')
+        // console.log(res.windowWidth)
+        // console.log(res.windowHeight)
+        // console.log(res.language)
+        // console.log(res.version)
+        this.globalData.pixelRatio = res.pixelRatio
 
+        console.log(res.statusBarHeight)
+        // this.globalData.statusBar = res.statusBarHeight; //状态栏高度
+        // let custom = wx.getMenuButtonBoundingClientRect();//菜单按钮
+        // this.globalData.custom = custom;
+        // this.globalData.customBar = custom.bottom + custom.top - res.statusBarHeight;
       }
-      })
+    })
     
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')

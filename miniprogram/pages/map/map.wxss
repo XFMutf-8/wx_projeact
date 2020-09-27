@@ -134,7 +134,7 @@ page{
     background-repeat: no-repeat;
     top: 3%;
     -webkit-animation-name: an1; 
-    -webkit-animation-duration: 60s; /*动画持续时间*/
+    -webkit-animation-duration: 100s; /*动画持续时间*/
     -webkit-animation-iteration-count: infinite; /*动画次数*/
     -webkit-animation-delay: 0s; /*延迟时间*/
 }
@@ -146,7 +146,7 @@ page{
     background-repeat: no-repeat;
     top: 30%;
     -webkit-animation-name: an1; 
-    -webkit-animation-duration: 60s; /*动画持续时间*/
+    -webkit-animation-duration: 120s; /*动画持续时间*/
     -webkit-animation-iteration-count: infinite; /*动画次数*/
     -webkit-animation-delay: 0s; /*延迟时间*/
 }
@@ -158,7 +158,7 @@ page{
     background-repeat: no-repeat;
     top: 60%;
     -webkit-animation-name: an2; 
-    -webkit-animation-duration: 50s; /*动画持续时间*/
+    -webkit-animation-duration: 110s; /*动画持续时间*/
     -webkit-animation-iteration-count: infinite; /*动画次数*/
     -webkit-animation-delay: 0s; /*延迟时间*/
 }
