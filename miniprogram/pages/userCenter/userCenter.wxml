@@ -1,7 +1,6 @@
 <!-- pages/userCenter/userCenter.wxml -->
 <view class="mainBg" hover-class="none" hover-stop-propagation="false">
     <view class="top" hover-class="none" hover-stop-propagation="false">
-        <video src="" wx:if="{{false}}"></video>
         <view class="btn" hover-class="none" hover-stop-propagation="false" bind:tap="changePlayStatus">
             <image class="" src="../../images/pause.png" mode="widthFix" wx:if="{{!isPlay}}"></image>
             <image class="" src="../../images/play.png" mode="widthFix" wx:else></image>
@@ -49,5 +48,7 @@
         <image class="" src="../../images/school_name.png" mode="widthFix"></image>
     </view>
 </view>
+<video src="https://qny.shabula.com/video/mevideo.mp4" autoplay wx:if="{{isPlay}}"></video>
+<view class="bg" wx:if="{{isPlay}}" catch:tap="changePlayStatus"></view>
 <Modal url='{{curMap}}' id='myModal' />
 <toast message='{{message}}' id="toast"></toast>

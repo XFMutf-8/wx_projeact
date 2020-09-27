@@ -2,7 +2,8 @@
 App({
   globalData: {
     pixelRatio : 3,
-    curMapList : [false,false]
+    curMapList : [false,false],
+    isPlay : false
   },
   onLaunch: function () {
     wx.getSystemInfo({

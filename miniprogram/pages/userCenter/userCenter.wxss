@@ -114,3 +114,19 @@
   display: block;
   text-align: center;
 }
+.bg {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  position: fixed;
+  background-color: #000;
+}
+video {
+  top: 50%;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transform: translateY(-50%);
+}

@@ -16,6 +16,9 @@ Page({
     this.setData({
        isPlay: !this.data.isPlay
     })
+    this.getTabBar().setData({
+      isPlay : this.data.isPlay
+    })
   },
   showMapModal(e){
     console.log(e)

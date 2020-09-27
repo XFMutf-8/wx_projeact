@@ -15,7 +15,7 @@ page{
     background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%98%8C%E5%B9%B3%E5%BA%95%E5%9B%BE.png?sign=bee0572f82537e31c57a468f31147e43&t=1597763396');
     height: 100%;
     background-repeat: no-repeat;
-    background-size: 100% 1334rpx;
+    background-size: 100% 100%;
     background-position: center center;
     position: relative;
 }
