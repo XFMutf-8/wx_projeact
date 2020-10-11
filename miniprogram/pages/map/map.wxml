@@ -1,17 +1,46 @@
-<!--pages/map/map.wxml-->
+<!-- pages/map/map.wxml -->
 <image class='gold' src="../../images/gold.png"></image>
-<view class="{{pixelRatio == '3'?'pix3 map' : 'map'}}" hover-class="none" hover-stop-propagation="false">
-  <image id="a" class="picture1" src="{{spotImageUrl['宝鼎']}}" mode="widthFix" bind:tap="goDetail"/>
-  <image id="b" class="picture2" src="{{spotImageUrl['法镜']}}" mode="widthFix"  bind:tap="goDetail"/>
-  <image id="c" class="picture3" src="{{spotImageUrl['铜像']}}" mode="widthFix"  bind:tap="goDetail"/>
-  <image id="d" class="picture4" src="{{spotImageUrl['拓荒牛']}}" mode="widthFix"  bind:tap="goDetail"/>
-  <image id="e" class="picture5" src="{{spotImageUrl['孔子神像']}}" mode="widthFix"  bind:tap="goDetail"/>
-  <image id="f" class="picture6" src="{{spotImageUrl['谢觉哉']}}" mode="widthFix"  bind:tap="goDetail"/>
-  <image id="g" class="picture7" src="{{spotImageUrl['海子石']}}" mode="widthFix"  bind:tap="goDetail"/>
-  <image id="h" class="picture8" src="{{spotImageUrl['雷洁琼']}}" mode="widthFix" bind:tap="goDetail" />
-  <image id="i" class="picture9" src="{{spotImageUrl['彭真']}}" mode="widthFix"  bind:tap="goDetail"/>
-  <image id="x" class="picture10" src="{{spotImageUrl['法治广场']}}" mode="widthFix"  bind:tap="goDetail"/>
+<view class="page_contant" style="overflow:hidden;">
+  <view class="bg_top">
+    <image style="width:100%;height:100%;" src="{{bg_top}}" mode="aspectFill" />
+  </view>
+  <view class="bg_middle">
+    <image style="width:100%;height:100%;" src="{{bg_bottom}}" mode="aspectFill" />
+  </view>
+  <view class="changping_school_map">
+    <image class="changping_school_map_img" style="width:100%;height:100%;" src="{{bg_school_map}}" mode="aspectFit" />
+    <view class="{{pixelRatio == '3'?'pix3 map' : 'map'}}" hover-class="none" hover-stop-propagation="false">
+      <image id="a" class="place1" src="{{spotImageUrl['宝鼎']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="b" class="place2" src="{{spotImageUrl['法镜']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="c" class="place3" src="{{spotImageUrl['铜像']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="d" class="place4" src="{{spotImageUrl['拓荒牛']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="e" class="place5" src="{{spotImageUrl['孔子神像']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="f" class="place6" src="{{spotImageUrl['谢觉哉']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="g" class="place7" src="{{spotImageUrl['海子石']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="h" class="place8" src="{{spotImageUrl['雷洁琼']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="i" class="place9" src="{{spotImageUrl['彭真']}}" mode="widthFix" bind:tap="goDetail" />
+      <image id="x" class="place10" src="{{spotImageUrl['法治广场']}}" mode="widthFix" bind:tap="goDetail" />
+    </view>
+  </view>
+  <view class="bg_bottom" style="pointer-events:none;">
+    <image style="width:100%;height:100%;" src="{{bg_front_cloud}}" mode="aspectFill" />
+  </view>
 </view>
-<view class="cloud1" hover-class="none" hover-stop-propagation="false"></view>
-<view class="cloud2" hover-class="none" hover-stop-propagation="false"></view>
-<view class="cloud3" hover-class="none" hover-stop-propagation="false"></view>
+<!-- <view class="{{pixelRatio == '3'?'pix3 map' : 'map'}}" hover-class="none" hover-stop-propagation="false">
+  <image id="a" class="picture1" src="{{spotImageUrl['宝鼎']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="b" class="picture2" src="{{spotImageUrl['法镜']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="c" class="picture3" src="{{spotImageUrl['铜像']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="d" class="picture4" src="{{spotImageUrl['拓荒牛']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="e" class="picture5" src="{{spotImageUrl['孔子神像']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="f" class="picture6" src="{{spotImageUrl['谢觉哉']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="g" class="picture7" src="{{spotImageUrl['海子石']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="h" class="picture8" src="{{spotImageUrl['雷洁琼']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="i" class="picture9" src="{{spotImageUrl['彭真']}}" mode="widthFix" bind:tap="goDetail" />
+  <image id="x" class="picture10" src="{{spotImageUrl['法治广场']}}" mode="widthFix" bind:tap="goDetail" />
+</view> -->
+
+<view style="position:relative;overflow-x:hidden;height:100%;">
+  <view class="cloud1" hover-class="none" hover-stop-propagation="false"></view>
+  <view class="cloud2" hover-class="none" hover-stop-propagation="false"></view>
+  <view class="cloud3" hover-class="none" hover-stop-propagation="false"></view>
+</view>

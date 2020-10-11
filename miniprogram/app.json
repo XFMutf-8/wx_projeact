@@ -1,65 +1,67 @@
 {
-    "pages": [
-        "pages/start/start",
-        "pages/home/home",
-        "pages/map/map",
-        "pages/spotList/spotList",
-        "pages/userCenter/userCenter",
-        "pages/detail/detail",
-        "pages/index/index",
-        "pages/userConsole/userConsole",
-        "pages/storageConsole/storageConsole",
-        "pages/databaseGuide/databaseGuide",
-        "pages/addFunction/addFunction",
-        "pages/deployFunctions/deployFunctions",
-        "pages/chooseLib/chooseLib",
-        "pages/openapi/openapi",
-        "pages/openapi/serverapi/serverapi",
-        "pages/openapi/callback/callback",
-        "pages/openapi/cloudid/cloudid",
-        "pages/im/im",
-        "pages/im/room/room"
-    ],
-    "window": {
-        "backgroundColor": "#F6F6F6",
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#F6F6F6",
-        "navigationBarTitleText": "文化景观",
-        "navigationBarTextStyle": "black",
-        "navigationStyle":"custom"
-    },
-    "tabBar": {
-        "custom": true,
-        "list": [
-            {
-                "pagePath": "pages/home/home",
-                "iconPath": "images/tab_icon11.png",
-                "selectedIconPath": "images/tab_icon1.png"
-            },
-            {
-                "pagePath": "pages/map/map",
-                "iconPath": "images/tab_icon22.png",
-                "selectedIconPath": "images/tab_icon2.png"
-            },
-            {
-                "pagePath": "pages/spotList/spotList",
-                "iconPath": "images/tab_icon33.png",
-                "selectedIconPath": "images/tab_icon3.png"
-            },
-            {
-                "pagePath": "pages/userCenter/userCenter",
-                "iconPath": "images/tab_icon44.png",
-                "selectedIconPath": "images/tab_icon4.png"
-            }
-        ]
-    },
-    "sitemapLocation": "sitemap.json",
-    "usingComponents": {},
-    "style": "v2",
-    "plugins": {
-        "routePlan": {
-          "version": "1.0.8",
-          "provider": "wx50b5593e81dd937a"
-        }
+  "pages": [
+    "pages/start/start",
+    "pages/home/home",
+    "pages/map/map",
+    "pages/spotList/spotList",
+    "pages/userCenter/userCenter",
+    "pages/detail/detail",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/vr/vrweb",
+    "pages/vr/outweblink"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "文化景观",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/tab_icon11.png",
+        "selectedIconPath": "images/tab_icon1.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "iconPath": "images/tab_icon22.png",
+        "selectedIconPath": "images/tab_icon2.png"
+      },
+      {
+        "pagePath": "pages/spotList/spotList",
+        "iconPath": "images/tab_icon33.png",
+        "selectedIconPath": "images/tab_icon3.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "iconPath": "images/tab_icon44.png",
+        "selectedIconPath": "images/tab_icon4.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {},
+  "style": "v2",
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.8",
+      "provider": "wx50b5593e81dd937a"
     }
+  }
 }

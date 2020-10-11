@@ -1,0 +1,7 @@
+<!-- 
+<view>
+  <view>
+    <web-view class="webview" src='{webrul}'/> 
+  </view>
+</view> -->
+<web-view class="webview" src='{webrul}'/> 

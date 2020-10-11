@@ -21,7 +21,7 @@ var json = [
     "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/noWordImg/%E6%B3%95%E6%B2%BB%E5%B9%BF%E5%9C%BA.png?sign=08a4c19555cb3d30343827f86160d178&t=1600737430',
     "imgUrl": [
       "https://qny.shabula.com/img/fazhiguangchang2.jpg",
-      "https://qny.shabula.com/img/fazhiguangchang3.jpg"
+      "https://qny.shabula.com/img/fazhiguangchang4.jpg"
     ],
     "txt": [
       "法治广场于2007年10月落成，位于昌平校区法渊阁东侧。其主体建筑为两面主题墙，一面以《苏格拉底之死》为主题，再现了苏格拉底服刑前与弟子告别的场面。苏格拉底之死向后世昭示，法治首先是程序之治，法治的前提是法的善良，法治必定是良法之治和善法之治。另一面墙以《世界人权宣言》全文为主题，该宣言于1948年12月10日在第三届联合国大会通过，是国际社会第一次就人权和基本自由作出的世界性宣言，是国际人权宪章体系的第一个文件。1950年，联合国大会将每年的12月10日定为“世界人权日”。"  
@@ -232,7 +232,7 @@ var json = [
     "headImg": 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/noWordImg/%E6%89%AC%E5%B8%86%E9%9B%95%E5%A1%91.png?sign=cea1112c34fbbe5dbffe4edcbf925d7c&t=1600736327',
     "imgUrl": [
       "https://qny.shabula.com/img/yangfan2.jpg",
-      "https://qny.shabula.com/img/yangfan3.jpg"
+      "https://qny.shabula.com/img/yangfan4.jpg"
     ],
     "txt": [
       "扬帆雕塑现位于海淀校区综合科研楼西侧，是2004年法大80级本科生校友为纪念毕业20周年捐赠给学校的，并请中国政法大学首任校长刘复之先生书写了“扬帆”二字。刘复之先生是无产阶级革命家，我国政法战线的杰出领导人，1982年4月担任司法部党组书记，同年5月兼任司法部部长，1983年2月兼任中国政法大学校长。80年代，中国法治建设进入新的历史阶段，众多青年学子满怀理想与报国激情，在法大“扬帆”起航！"  

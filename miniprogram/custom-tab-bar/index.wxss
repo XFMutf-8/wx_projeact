@@ -57,15 +57,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-
+.imgWraps{
+  width: 90rpx;
+  height: 56rpx;
+}
 .widthFix{
   width: 100%;
 }
-
 .text{
   font-size: 24rpx;
   color: #333;
-   margin-bottom: 6rpx;
+  margin-bottom: 6rpx;
   display: block;
 }

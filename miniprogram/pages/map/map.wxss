@@ -1,182 +1,294 @@
 /* pages/map/map.wxss */
-page{
-    height: 100%;
+page {
+  height: 100%;
 }
-.gold{
-    position: fixed;
-    z-index: 99;
-    top: 82rpx;
-    left: 65rpx;
-    width: 78rpx;
-    height: 78rpx;
-
-}
-.map{
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%98%8C%E5%B9%B3%E5%BA%95%E5%9B%BE.png?sign=bee0572f82537e31c57a468f31147e43&t=1597763396');
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-    position: relative;
-}
-.pix3{
-    background-size: 100% 100%;  
-}
-.picture1{
-    position: absolute;
-    bottom: 174rpx;
-    left: 80rpx;
-    width: 220rpx;
-}
-.pix3 .picture1{
-    bottom: 240rpx;  
-}
-.picture2{
-    position: absolute;
-    bottom: 140rpx;
-    right: 215rpx;
-    width: 180rpx;
-}
-.pix3 .picture2{
-    bottom: 210rpx;  
-}
-.picture3{
-    position: absolute;
-    bottom: 262rpx;
-    left: 208rpx;
-    width: 150rpx;
-}
-.pix3 .picture3{
-    bottom: 315rpx;  
-}
-.picture4{
-    position: absolute;
-    bottom: 417rpx;
-    right: 164rpx;
-    width: 170rpx;
-}
-.pix3 .picture4{
-    bottom: 490rpx;  
-}
-.picture5{
-    position: absolute;
-    bottom: 760rpx;
-    left: 380rpx;
-    width: 130rpx;
-}
-.pix3 .picture5{
-    bottom: 920rpx;  
-}
-.picture6{
-    position: absolute;
-    bottom: 318rpx;
-    left: 316rpx;
-    width: 140rpx;
-}
-.pix3 .picture6{
-    bottom: 395rpx;  
+.gold {
+  position: fixed;
+  z-index: 99;
+  top: 82rpx;
+  left: 65rpx;
+  width: 78rpx;
+  height: 78rpx;
 }
 
-.picture7{
-    position: absolute;
-    bottom: 232rpx;
-    right: 79rpx;
-    width: 150rpx;
+.bg_top {
+  position: fixed;
+  z-index: -1;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 666rpx;
 }
-.pix3 .picture7{
-    bottom: 300rpx;  
+.bg_middle {
+  position: fixed;
+  z-index: -1;
+  top: 666rpx;
+  left: 0rpx;
+  width: 100%;
+  height: calc(100vh - 666rpx);
+}
+.bg_bottom {
+  position: fixed;
+  z-index: 99;
+  bottom: 120rpx;
+  width: 100%;
+  height: 164rpx;
 }
 
-.picture8{
-    position: absolute;
-    left: 100rpx;
-    bottom: 420rpx;
-    width: 150rpx;
+.changping_school_map {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  bottom: 0rpx;
+  right: 0rpx;
+  margin: auto;
+  transform: translateY(-20px);
+  z-index: 1;
+  width: 100%;
+  height: 1000rpx;
 }
-.pix3 .picture8{
-    bottom: 486rpx;  
+
+.changping_school_map_img {
+  position: absolute;
+  z-index: -1;
 }
-.picture9{
-    position: absolute;
-    left: 161rpx;
-    bottom: 570rpx;
-    width: 130rpx;
+
+/* 宝鼎*/
+.place1 {
+  position: absolute;
+  bottom: 10rpx;
+  left: 60rpx;
+  width: 220rpx;
 }
-.pix3 .picture9{
-    bottom: 642rpx;  
+/* 法镜*/
+.place2 {
+  position: absolute;
+  bottom: 40rpx;
+  right: 215rpx;
+  width: 180rpx;
 }
-.picture10{
-    position: absolute;
-    left: 320rpx;
-    bottom: 530rpx;
-    width: 150rpx;
+/* 钱端升铜像*/
+.place3 {
+  position: absolute;
+  bottom: 102rpx;
+  left: 150rpx;
+  width: 150rpx;
 }
-.pix3 .picture10{
-    bottom: 600rpx; 
+/* 拓荒牛*/
+.place4 {
+  position: absolute;
+  bottom: 267rpx;
+  right: 200rpx;
+  width: 170rpx;
+}
+/* 孔子神像*/
+.place5 {
+  position: absolute;
+  bottom: 560rpx;
+  left: 380rpx;
+  width: 130rpx;
+}
+/* 谢觉哉像*/
+.place6 {
+  position: absolute;
+  bottom: 180rpx;
+  left: 250rpx;
+  width: 140rpx;
+}
+/* 海子石*/
+.place7 {
+  position: absolute;
+  bottom: 100rpx;
+  right: 79rpx;
+  width: 150rpx;
+}
+
+/* 雷洁琼*/
+.place8 {
+  position: absolute;
+  left: 50rpx;
+  bottom: 280rpx;
+  width: 150rpx;
+}
+/* 彭真*/
+.place9 {
+  position: absolute;
+  left: 140rpx;
+  bottom: 400rpx;
+  width: 130rpx;
+}
+/* 法治广场*/
+.place10 {
+  position: absolute;
+  left: 300rpx;
+  bottom: 400rpx;
+  width: 150rpx;
+}
+
+.map {
+  /* background-image: url("https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%98%8C%E5%B9%B3%E5%BA%95%E5%9B%BE.png?sign=bee0572f82537e31c57a468f31147e43&t=1597763396"); */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: relative;
+}
+.pix3 {
+  background-size: 100% 100%;
+}
+.picture1 {
+  position: absolute;
+  bottom: 174rpx;
+  left: 80rpx;
+  width: 220rpx;
+}
+.pix3 .picture1 {
+  bottom: 240rpx;
+}
+.picture2 {
+  position: absolute;
+  bottom: 140rpx;
+  right: 215rpx;
+  width: 180rpx;
+}
+.pix3 .picture2 {
+  bottom: 210rpx;
+}
+.picture3 {
+  position: absolute;
+  bottom: 262rpx;
+  left: 208rpx;
+  width: 150rpx;
+}
+.pix3 .picture3 {
+  bottom: 315rpx;
+}
+.picture4 {
+  position: absolute;
+  bottom: 417rpx;
+  right: 164rpx;
+  width: 170rpx;
+}
+.pix3 .picture4 {
+  bottom: 490rpx;
+}
+.picture5 {
+  position: absolute;
+  bottom: 760rpx;
+  left: 380rpx;
+  width: 130rpx;
+}
+.pix3 .picture5 {
+  bottom: 920rpx;
+}
+.picture6 {
+  position: absolute;
+  bottom: 318rpx;
+  left: 316rpx;
+  width: 140rpx;
+}
+.pix3 .picture6 {
+  bottom: 395rpx;
+}
+
+.picture7 {
+  position: absolute;
+  bottom: 232rpx;
+  right: 79rpx;
+  width: 150rpx;
+}
+.pix3 .picture7 {
+  bottom: 300rpx;
+}
+
+.picture8 {
+  position: absolute;
+  left: 100rpx;
+  bottom: 420rpx;
+  width: 150rpx;
+}
+.pix3 .picture8 {
+  bottom: 486rpx;
+}
+.picture9 {
+  position: absolute;
+  left: 161rpx;
+  bottom: 570rpx;
+  width: 130rpx;
+}
+.pix3 .picture9 {
+  bottom: 642rpx;
+}
+.picture10 {
+  position: absolute;
+  left: 320rpx;
+  bottom: 530rpx;
+  width: 150rpx;
+}
+.pix3 .picture10 {
+  bottom: 600rpx;
 }
 .cloud1 {
-    z-index: 20;
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%911.png?sign=0d45d576fa46a86c3c6d3c5f5b29c170&t=1600155600');
+  z-index: 20;
+  background-image: url("https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%911.png?sign=0d45d576fa46a86c3c6d3c5f5b29c170&t=1600155600");
 }
 .cloud2 {
-    z-index: 20;
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%912.png?sign=5a3876f6128143e87d2141f78788246e&t=1600155670');
+  z-index: 20;
+  background-image: url("https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%912.png?sign=5a3876f6128143e87d2141f78788246e&t=1600155670");
 }
 .cloud3 {
-    z-index: 20;
-    background-image: url('https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%913.png?sign=b27772dd9654c0fb4444d24f75a0a8ce&t=1600155689');
+  z-index: 20;
+  background-image: url("https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E4%BA%913.png?sign=b27772dd9654c0fb4444d24f75a0a8ce&t=1600155689");
 }
-.cloud1{
-    position: absolute;
-    width: 200rpx;
-    height: 90rpx;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    top: 3%;
-    -webkit-animation-name: an1; 
-    -webkit-animation-duration: 100s; /*动画持续时间*/
-    -webkit-animation-iteration-count: infinite; /*动画次数*/
-    -webkit-animation-delay: 0s; /*延迟时间*/
+.cloud1 {
+  position: absolute;
+  width: 200rpx;
+  height: 90rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  top: 3%;
+  -webkit-animation-name: an1;
+  -webkit-animation-duration: 100s; /*动画持续时间*/
+  -webkit-animation-iteration-count: infinite; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
 }
-.cloud2{
-    position: absolute;
-    width: 200rpx;
-    height: 60rpx;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    top: 30%;
-    -webkit-animation-name: an1; 
-    -webkit-animation-duration: 120s; /*动画持续时间*/
-    -webkit-animation-iteration-count: infinite; /*动画次数*/
-    -webkit-animation-delay: 0s; /*延迟时间*/
+.cloud2 {
+  position: absolute;
+  width: 200rpx;
+  height: 60rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  top: 30%;
+  -webkit-animation-name: an1;
+  -webkit-animation-duration: 120s; /*动画持续时间*/
+  -webkit-animation-iteration-count: infinite; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
 }
-.cloud3{
-    position: absolute;
-    width: 200rpx;
-    height: 100rpx;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    top: 60%;
-    -webkit-animation-name: an2; 
-    -webkit-animation-duration: 110s; /*动画持续时间*/
-    -webkit-animation-iteration-count: infinite; /*动画次数*/
-    -webkit-animation-delay: 0s; /*延迟时间*/
+.cloud3 {
+  position: absolute;
+  width: 200rpx;
+  height: 100rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  top: 60%;
+  -webkit-animation-name: an2;
+  -webkit-animation-duration: 110s; /*动画持续时间*/
+  -webkit-animation-iteration-count: infinite; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
 }
-@keyframes an1
-{
-    0%{
-        right: -200rpx;
-    }
-    100%{
-        right: 800rpx;
-    }
+@keyframes an1 {
+  0% {
+    right: -200rpx;
+  }
+  100% {
+    right: 800rpx;
+  }
 }
-@keyframes an2
-{
-    0%{
-        left: -200rpx;
-    }
-    100%{
-        left: 800rpx;
-    }
+@keyframes an2 {
+  0% {
+    left: -200rpx;
+  }
+  100% {
+    left: 800rpx;
+  }
 }

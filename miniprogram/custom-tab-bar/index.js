@@ -20,25 +20,29 @@ Component({
         {
           "pagePath": "/pages/home/home",
           "iconPath": "/images/tab_icon11.png",
-          "selectedIconPath": "/images/tab_icon1.png"
-      },
-      {
+          "selectedIconPath": "/images/tab_icon1.png",
+          'text': '海淀'
+        },
+        {
           "pagePath": "/pages/map/map",
           "iconPath": "/images/tab_icon22.png",
-          "selectedIconPath": "/images/tab_icon2.png"
-      },
-      {
+          "selectedIconPath": "/images/tab_icon2.png",
+          'text': '昌平'
+        },
+        {
           "pagePath": "/pages/spotList/spotList",
           "iconPath": "/images/tab_icon33.png",
-          "selectedIconPath": "/images/tab_icon3.png"
-      },
-      {
+          "selectedIconPath": "/images/tab_icon3.png",
+          'text': '图列'
+        },
+        {
           "pagePath": "/pages/userCenter/userCenter",
           "iconPath": "/images/tab_icon44.png",
-          "selectedIconPath": "/images/tab_icon4.png"
-      }
+          "selectedIconPath": "/images/tab_icon4.png",
+          'text': '个人'
+        }
       ]
-    }, 
+    }
   },
   observers: {
     'tabCartNumber': function (res) {

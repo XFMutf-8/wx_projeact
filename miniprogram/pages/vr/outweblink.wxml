@@ -1,0 +1,2 @@
+<!--miniprogram/pages/vr/outweblink.wxml-->
+<web-view src = "https://webapp.vizen.cn/pro_vizen_template/#/expopc/2007161990?isAutoJump=true" /> 

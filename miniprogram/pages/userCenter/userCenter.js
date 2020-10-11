@@ -1,4 +1,6 @@
 // pages/userCenter/userCenter.js
+
+import WeCanvas from '../../components/we-canvas-master/canvas'
 Page({
 
   /**
@@ -8,8 +10,8 @@ Page({
     isPlay : false,
     curMap : '',
     dataList : [],
-    map1 : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%B5%B7%E6%B7%80%E8%AE%BE%E8%AE%A1%E5%9B%BE.png?sign=73d8ad3bd4b7d02566191059aef72dc9&t=1599358489',
-    map2 : 'https://7365-severless-om62w-1302847609.tcb.qcloud.la/backImage/%E6%98%8C%E5%B9%B3%E8%AE%BE%E8%AE%A1%E5%9B%BE.png?sign=e25c15bb9ccf0566aa2b92dabaf4d4b9&t=1599462116'
+    map1 : 'https://qny.shabula.com/src/resouce/me/haidian_download.png',
+    map2 : 'https://qny.shabula.com/src/resouce/me/changping_download.png'
 
   },
   changePlayStatus(){
@@ -21,13 +23,15 @@ Page({
     })
   },
   showMapModal(e){
-    console.log(e)
-    let map = e.currentTarget.dataset.url
+    console.log(e);
+    let isRight =  e.currentTarget.id == 'map2';
     this.setData({
-      curMap : map
-    })
-    this.selectComponent('#myModal')._showModal()
-   
+      curMap : e.currentTarget.dataset.url,
+      curSelectRight:isRight,
+    });
+
+    this.onCreateImage();
+
   },
   onGetOpenid: function() {
     // 调用云函数
@@ -100,7 +104,6 @@ Page({
         // handle error
       }
     })
-
   },
 
   // 下载图片
@@ -212,7 +215,6 @@ writePhotosAlbum(successFun,failFun){
   })
 },
 
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -220,9 +222,7 @@ writePhotosAlbum(successFun,failFun){
     var appInst =  getApp();
     this.setData({
       curMapList : appInst.globalData.curMapList
-    })
-    
-   
+    });
   },
 
   /**
@@ -279,5 +279,272 @@ writePhotosAlbum(successFun,failFun){
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  /** 合成图片*/
+  onCreateImage:function(){
+
+    wx.showLoading({
+      title: '图片正在合成中...',
+    });
+    let that = this;
+    const ctx = wx.createCanvasContext('myCanvas');
+    const date = new Date; 
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const time = year + '.' + month + '.' + day; 
+
+    ctx.save();
+
+    // 获取图片
+    wx.getImageInfo({
+      src: that.data.curMap,
+       success: (res) => {
+
+        let imagePath = res.path;
+        let image_w = res.width;
+        let image_h = res.height; 
+
+        // 绘制底图
+        ctx.drawImage(imagePath,0,0,image_w,image_h);
+
+        //绘制logo
+        ctx.drawImage('../../images/gold.png',24,24,50,50);
+        if (!that.data.curSelectRight){
+          that.drawHaidain(ctx);
+        } else {
+          that.drawChangping(ctx);
+        }
+
+        // 绘制时间
+        ctx.setFillStyle('#7b5f39');
+        ctx.setFontSize(40);
+        ctx.setTextAlign('left');
+        const metrics = ctx.measureText(time).width;   //时间文字的所占宽度
+        ctx.fillText(time, image_w - metrics - 20, image_h - 40, metrics + 5);
+        ctx.restore();
+        ctx.draw();
+
+        //canvas画图需要时间而且还是异步的，所以加了个定时器
+        setTimeout(()=>{
+          // 将生成的canvas图片，转为真实图片
+          wx.canvasToTempFilePath({
+            x:0,
+            y:0,
+            canvasId:'myCanvas',
+            success:function (res) { 
+              let shareImg = res.tempFilePath; 
+              that.setData({
+                shareImg: shareImg, 
+              }); 
+              that.selectComponent('#myModal')._showModal();
+            },
+            fail: function (res) {
+            },
+          });
+        },500); 
+       },
+      fail: (err) => {
+        console.log('获取校园图片失败'); 
+      },
+      complete: () => {
+        wx.hideLoading({
+          success: (res) => {},
+        });
+      },
+    });
+  },
+
+  drawHaidain:function(ctx){ 
+
+    let rectWidth = 96;
+    let arcWidth = 5;
+    
+    // 法庭科学博物馆
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(380,220,rectWidth,rectWidth);
+    // 放置图片
+  
+    ctx.restore();
+    ctx.arc(380 + rectWidth , 220 + (rectWidth)/2 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+     
+    // 1-3号楼
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(140,380,rectWidth,rectWidth);
+
+    ctx.restore(); 
+    ctx.arc(140 + rectWidth/2 , 380 + rectWidth , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 杨帆雕塑
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(320,470,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(320 + rectWidth/2 , 470 + rectWidth , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 钱端升纪念馆
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(550,420,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(550 + rectWidth/2 , 420 + rectWidth , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 湖心亭
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(220,800,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(220 + rectWidth/2 , 800 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 法治天下碑
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(580,870,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(580 + rectWidth/2 , 870 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+  },
+
+  drawChangping:function(ctx){ 
+  
+    let rectWidth = 96;
+    let arcWidth = 5;
+
+    // 孔子圣象
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(510,400,rectWidth,rectWidth);
+    // 放置图片
+    ctx.restore();
+    ctx.arc(510, 400 + (rectWidth)/2 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+     
+    // 彭真雕像
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(80,570,rectWidth,rectWidth);
+
+    ctx.restore(); 
+    ctx.arc(80 + rectWidth, 570 + rectWidth/2 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 法治广场
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(420,620,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(420 + rectWidth/2 , 620 + rectWidth , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 雷洁琼雕像
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(0,770,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(rectWidth, 770 + rectWidth/2 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 拓荒牛
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(610,760,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(610, 760 + rectWidth/2, arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 谢觉哉铜像
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(460,920,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(460 , 920 + rectWidth/2, arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 钱端升铜像
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(130,920,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(130 + rectWidth , 920 + rectWidth/2, arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 校训宝鼎
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(100,1180,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(100 + rectWidth/2 , 1180 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 法镜
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(300,1140,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(300 + rectWidth/2 , 1140 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+
+    // 海子石
+    ctx.restore();
+    ctx.setFillStyle('#eafdfd');
+    ctx.fillRect(620,1110,rectWidth,rectWidth);
+ 
+    ctx.restore();
+    ctx.arc(620 + rectWidth/2 , 1110 , arcWidth, 0, 2 * Math.PI);
+    ctx.setFillStyle('#ef837c');
+    ctx.fill();
+    ctx.closePath();
+  
+  } 
 })
+

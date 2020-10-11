@@ -65,7 +65,8 @@ Page({
     let current = options.currentId
     let curArea = options.curArea || '1'
     this.setData({
-      curArea 
+      curArea,
+      pagetype:current,
     })
     if (current == 'a') { //宝鼎
       this.setData({
@@ -123,11 +124,11 @@ Page({
       this.setData({
         mainInfo: jsonData.dataList[10]
       })
-    } else if (current == 'x') { //法庭科学
+    } else if (current == 'x') { //法治广场
       this.setData({
         mainInfo: jsonData.dataList[1]
       })
-    }else if (current == 'y') { //法治广场
+    }else if (current == 'y') { //法庭科学
       this.setData({
         mainInfo: jsonData.dataList[2]
       })
@@ -203,6 +204,27 @@ Page({
     })
 
   },
+  jumpintovrshow(){
+    
+    let qianduansheng_vr = "https://webapp.vizen.cn/pro_vizen_template/#/expopc/2007161990?isAutoJump=true";
+    let fating_vr = ""
+    let weburl  = this.data.pagetype == 'n' ? qianduansheng_vr: fating_vr;
+
+    // wx.navigateTo({
+    //   url: `/pages/vr/vrweb?weburl=${this.data.pagetype}&weburl=${weburl}`,
+    //   success: (result) => {},
+    //   fail: () => {},
+    //   complete: () => {},
+    // });
+
+    wx.navigateTo({
+      url: `/pages/vr/outweblink`,
+      success: (result) => {},
+      fail: () => {},
+      complete: () => {},
+    });
+
+  },
   startCamera() {
     this.getPosition()
     if(!this.data.isInArea) return
@@ -248,7 +270,6 @@ Page({
                 isInArea : false
               })
         }
-       
       },
       fail: (res) => {
         console.log(res);

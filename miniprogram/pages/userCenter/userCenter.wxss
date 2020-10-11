@@ -130,3 +130,10 @@ video {
   z-index: 1000;
   transform: translateY(-50%);
 }
+
+.mycanvas{
+  position: absolute;
+  left: -1000px;
+  width: 750px;
+  height: 1334px;
+}

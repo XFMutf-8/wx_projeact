@@ -48,7 +48,9 @@
         <image class="" src="../../images/school_name.png" mode="widthFix"></image>
     </view>
 </view>
-<video src="https://qny.shabula.com/video/mevideo.mp4" autoplay wx:if="{{isPlay}}"></video>
+<video src="https://qny.shabula.com/video/mevideo2.mp4" autoplay wx:if="{{isPlay}}"></video>
 <view class="bg" wx:if="{{isPlay}}" catch:tap="changePlayStatus"></view>
-<Modal url='{{curMap}}' id='myModal' />
+<Modal url='{{shareImg}}' id='myModal' />
 <toast message='{{message}}' id="toast"></toast>
+
+<canvas class="mycanvas"  canvas-id="myCanvas" />

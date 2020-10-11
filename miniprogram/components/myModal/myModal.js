@@ -26,7 +26,6 @@ Component({
    */
   data: {
     visible: false
-
   },
 
   /**
@@ -84,32 +83,58 @@ Component({
       })
     },
     downLoad(e){
-      let map = e.currentTarget.dataset.url
-      let _this = this
-      wx.downloadFile({
-        url: map, //仅为示例，并非真实的资源
-        success (res) {
-          // 只要服务器有响应数据，就会把响应内容写入文件并进入 success 回调，业务需要自行判断是否下载到了想要的内容
-          if (res.statusCode === 200) {
-            _this._hideModal()
-            wx.saveImageToPhotosAlbum({　
-              filePath: res.tempFilePath,
-              success:(res) => {
-                wx.showToast({
-                  title: '保存成功',
-                  icon: 'success',
-                  duration: 2000
-                })
+      let map = e.currentTarget.dataset.url;
+      let that = this;
+      // 获取用户是否开启用户授权相册
+      wx.getSetting({
+          success(res) {
+            // 如果没有则获取授权
+            if (!res.authSetting['scope.writePhotosAlbum']) {
+              wx.authorize({
+                scope: 'scope.writePhotosAlbum',
+                success() {
+                  wx.saveImageToPhotosAlbum({
+                    filePath: map,
+                    success() {
+                      wx.showToast({
+                        title: '保存成功'
+                      })
+                    },
+                    fail() {
+                      wx.showToast({
+                        title: '保存失败',
+                        icon: 'none'
+                      })
+                    }
+                  })
+                },
+                fail() {
+                // 如果用户拒绝过或没有授权，则再次打开授权窗口
+                //（ps：微信api又改了现在只能通过button才能打开授权设置，以前通过openSet就可打开，下面有打开授权的button弹窗代码）
+                  that.setData({
+                    openSet: true
+                  })
+                }
+              })
+            } else {
+              // 有则直接保存
+              wx.saveImageToPhotosAlbum({
+                filePath: map,
+                success() {
+                  wx.showToast({
+                    title: '保存成功'
+                  })
+                },
+                fail() {
+                  wx.showToast({
+                    title: '保存失败',
+                    icon: 'none'
+                  })
+                }
+              })
+            }
           }
-        })
-
-
-
-          }
-        }
-      })
-
-    }
-
+        });
+    },
   }
 })

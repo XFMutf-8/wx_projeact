@@ -2,21 +2,25 @@
 App({
   globalData: {
     pixelRatio : 3,
+    isHeightIp : '',
     curMapList : [false,false],
     isPlay : false
   },
   onLaunch: function () {
     wx.getSystemInfo({
       success: (res) => {
-        // console.log(res.model)
-        // console.log(res.pixelRatio,'pix')
-        // console.log(res.windowWidth)
-        // console.log(res.windowHeight)
-        // console.log(res.language)
-        // console.log(res.version)
+        console.log(res.model)
+        console.log(res.pixelRatio,'pix')
+        console.log(res.windowWidth)
+        console.log(res.windowHeight)
+        console.log(res.language)
+        console.log(res.version)
         this.globalData.pixelRatio = res.pixelRatio
-
-        console.log(res.statusBarHeight)
+        
+        if(res.model == 'iPhone XR' || res.model == 'iPhone 11'){
+          this.globalData.pixelRatio = 3
+        }
+        // console.log(res.statusBarHeight)
         // this.globalData.statusBar = res.statusBarHeight; //状态栏高度
         // let custom = wx.getMenuButtonBoundingClientRect();//菜单按钮
         // this.globalData.custom = custom;
