@@ -12,8 +12,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/fajing.mp3',
-    "lon": "116.253255",
-    "lat": "40.227538"
+    "lon": "116.24671",
+    "lat": "40.221638"
   },
   {
     "name": "fazhiguangchang",
@@ -28,8 +28,8 @@ var json = [
     ],  
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/fazhiguangchang.mp3',
-    "lon": "116.253762",
-    "lat": "40.229562"
+    "lon": "116.24719075520834",
+    "lat": "40.22367214626736"
   },
   {
     "name": "fatingkexuebowuguan",
@@ -44,8 +44,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/fatingkexuebowuguan.mp3',
-    "lon": "116.361073",
-    "lat": "40.046545"
+    "lon": "116.35426",
+    "lat": "40.040764"
   },
   {
     "name": "fazhitianxiabei",
@@ -60,8 +60,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/fazhitianxiabei.mp3',
-    "lon": "116.359294",
-    "lat": "39.971016"
+    "lon": "116.3527503797743",
+    "lat": "39.965428059895835"
   },
   {
     "name": "floor",
@@ -76,8 +76,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/onetwothree.mp3',
-    "lon": "116.356623",
-    "lat": "39.972264"
+    "lon": "116.349724",
+    "lat": "39.966106"
   },
   {
     "name": "haizishi",
@@ -92,8 +92,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/haizishi.mp3',
-    "lon": "116.255855",
-    "lat": "40.227944"
+    "lon": "116.25051215277777",
+    "lat": "40.22137179904514"
   },
   {
     "name": "huxinting",
@@ -111,8 +111,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/huxinting.mp3',
-    "lon": "116.357166",
-    "lat": "39.971594"
+    "lon": "116.35059271918402",
+    "lat": "39.966861165364584"
   },
   {
     "name": "kongzi",
@@ -127,8 +127,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/kongzishengxiang.mp3',
-    "lon": "116.254068",
-    "lat": "40.23159"
+    "lon": "116.24858317057291",
+    "lat": "40.22575575086805"
   },
   {
     "name": "leijieqiong",
@@ -143,8 +143,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/leijieqiongxiuxiang.mp3',
-    "lon": "116.251544",
-    "lat": "40.229063"
+    "lon": "116.24506",
+    "lat": "40.22309"
   },
   {
     "name": "pengzhen",
@@ -159,8 +159,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/pengzhendiaoxiang.mp3',
-    "lon": "116.251961",
-    "lat": "40.230141"
+    "lon": "116.24558702256944",
+    "lat": "40.224239637586805"
   },
   {
     "name": "qianruisheng",
@@ -175,8 +175,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/qianruishengjinianguan.mp3',
-    "lon": "116.358231",
-    "lat": "39.971428"
+    "lon": "116.3518714352431",
+    "lat": "39.965640462239584"
   },
   {
     "name": "tuohuangniu",
@@ -191,8 +191,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/tuohuangniu.mp3',
-    "lon": "116.254305",
-    "lat": "40.229075"
+    "lon": "116.24777",
+    "lat": "40.223137"
   },
   {
     "name": "xiaoxunbaoding",
@@ -207,8 +207,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/xiaoxunbaoding.mp3',
-    "lon": "116.252334",
-    "lat": "40.227507"
+    "lon": "116.23564",
+    "lat": "40.22179"
   },
   {
     "name": "xiejuezai",
@@ -223,8 +223,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/xiejuezaitongxiang.mp3',
-    "lon": "116.253358",
-    "lat": "40.228392"
+    "lon": "116.24317735460069",
+    "lat": "40.22455078125"
   },
   {
     "name": "yangfan",
@@ -239,8 +239,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/yangfandiaosu.mp3',
-    "lon": "116.357165",
-    "lat": "39.971569"
+    "lon": "116.35025390625",
+    "lat": "39.96538058810764"
   },
   {
     "name": "qianruishengs",
@@ -255,8 +255,8 @@ var json = [
     ],
     "videoUrl": "",
     "audioUrl": 'https://qny.shabula.com/audio/qianruishengtongxiang.mp3',
-    "lon": "116.252312",
-    "lat": "40.228581"
+    "lon": "116.24682101779514",
+    "lat": "40.22236789279514"
   },
 ]
 

@@ -31,26 +31,28 @@ Page({
     curStep : 0
   },
   onAdd: function (data) {
+    console.log('执行数据库新增记录')
     const db = wx.cloud.database()
-    console.log(data)
+    // console.log(data)
     db.collection('my_spot_image').add({
       data: {
-        imageUrl: data.fileID
+        imageUrl: data.fileID,
+        placeName: this.data.pagetype
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id
         this.setData({
           counterId: res._id,
         })
-        wx.showToast({
-          title: '新增记录成功',
-        })
+        // wx.showToast({
+        //   title: '新增记录成功',
+        // })
         console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
       },
       fail: err => {
         wx.showToast({
           icon: 'none',
-          title: '新增记录失败'
+          title: '数据库新增记录失败'
         })
         console.error('[数据库] [新增记录] 失败：', err)
       }
@@ -226,8 +228,8 @@ Page({
 
   },
   startCamera() {
-    this.getPosition()
-    if(!this.data.isInArea) return
+    // this.getPosition()
+    // if(!this.data.isInArea) return
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],
@@ -265,10 +267,10 @@ Page({
           })
         }else{
           this.selectComponent('#toast').showToast()
-              this.setData({
-                message: ['不在打卡范围内'],
-                isInArea : false
-              })
+          this.setData({
+            message: ['不在打卡范围内'],
+            isInArea : false
+          })
         }
       },
       fail: (res) => {
@@ -277,9 +279,10 @@ Page({
     })
   },
   uploadPicture(){
+    // const cloudPath = 'myImage/' + this.data.pagetype
     const filePath = this.data.tempFilePaths[0]
-    // 上传图片
-    const cloudPath = 'myImage/' + new Date().getTime() + filePath.match(/\.[^.]+?$/)[0]
+    const cloudPath = 'myImage/' + new Date().getTime() + filePath.match(/\.[^.]+?$/)[0] 
+    
     wx.cloud.uploadFile({
       cloudPath,
       filePath,
@@ -289,8 +292,8 @@ Page({
         this.setData({
           message: ['打卡成功'],
         })
-        getApp.globalData.curMapList[this.data.curArea - 1] = true
-        this.onAdd(res)
+        getApp().globalData.curMapList[this.data.curArea - 1] = true
+        this.onAdd(res)  //数据库新增记录
       },
       fail: e => {
         console.error('[上传文件] 失败：', e)
